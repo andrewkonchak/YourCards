@@ -19,6 +19,7 @@
 		498BA54A1FA885C000253737 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BA5491FA885C000253737 /* SettingsViewController.swift */; };
 		498BA54C1FA885EA00253737 /* NewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BA54B1FA885EA00253737 /* NewCardViewController.swift */; };
 		498BA54E1FA8868500253737 /* CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BA54D1FA8868500253737 /* CardsManager.swift */; };
+		49E5DF8C1FA9DB3A009F7C61 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E5DF8A1FA9DB3A009F7C61 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		498BA5491FA885C000253737 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		498BA54B1FA885EA00253737 /* NewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewController.swift; sourceTree = "<group>"; };
 		498BA54D1FA8868500253737 /* CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsManager.swift; sourceTree = "<group>"; };
+		49E5DF8A1FA9DB3A009F7C61 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		498BA5131FA87C1900253737 /* YourCards */ = {
 			isa = PBXGroup;
 			children = (
+				49E5DF8A1FA9DB3A009F7C61 /* Card.swift */,
 				498BA5451FA8855A00253737 /* TabBarViewController.swift */,
 				498BA5141FA87C1900253737 /* AppDelegate.swift */,
 				498BA5471FA8859B00253737 /* UserViewController.swift */,
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				498BA5151FA87C1900253737 /* AppDelegate.swift in Sources */,
+				49E5DF8C1FA9DB3A009F7C61 /* Card.swift in Sources */,
 				498BA5481FA8859B00253737 /* UserViewController.swift in Sources */,
 				498BA5461FA8855A00253737 /* TabBarViewController.swift in Sources */,
 				498BA54A1FA885C000253737 /* SettingsViewController.swift in Sources */,

@@ -7,9 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
 class NewCardViewController: UIViewController {
 
+    
+    @IBOutlet weak var cardName: UITextField!
+    
+    @IBOutlet weak var cardNumber: UITextField!
+    
+    @IBOutlet weak var descriptionText: UITextField!
+    
+    let moContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+    
+    
+    @IBAction func createData(_ sender: Any) {
+        
+        
+        
+        
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
