@@ -10,8 +10,5 @@ import UIKit
 import CoreData
 
 class CardsManager {
-    
-//    let moContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
-//
-    
+      
 }
