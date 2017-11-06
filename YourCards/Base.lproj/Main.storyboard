@@ -86,22 +86,6 @@
             </objects>
             <point key="canvasLocation" x="1240.8" y="-433.13343328335833"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="dLp-6g-gLw">
-            <objects>
-                <viewController id="pC7-tT-FHm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w5b-ap-Ugl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="hiA-oE-JmY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="4z9-sg-b8r"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ks-fK-Gia" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="350" y="325"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vkR-Ta-IlK">
             <objects>
@@ -113,7 +97,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="tgN-50-QFV" kind="relationship" relationship="viewControllers" id="ksL-um-lxd"/>
-                        <segue destination="pC7-tT-FHm" kind="relationship" relationship="viewControllers" id="6OW-Ot-imf"/>
+                        <segue destination="Psw-BS-bfe" kind="relationship" relationship="viewControllers" id="gP3-iN-vyq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgB-kW-tEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,6 +128,56 @@
             </objects>
             <point key="canvasLocation" x="350" y="-433"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="Ryw-Xh-DRB">
+            <objects>
+                <tableViewController id="7gG-U3-JTz" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ryk-Rd-DAF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kxz-a2-gSI">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kxz-a2-gSI" id="21L-cK-Nsy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7gG-U3-JTz" id="Hih-vt-mN4"/>
+                            <outlet property="delegate" destination="7gG-U3-JTz" id="eGO-DS-iiG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="5oh-mZ-SEs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWT-aj-vgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1277" y="289"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="DPL-fg-l9V">
+            <objects>
+                <navigationController id="Psw-BS-bfe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="YqI-SQ-9Pc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bam-AO-Pcz">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.91808706520000005" green="0.4287595153" blue="0.39823278779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7gG-U3-JTz" kind="relationship" relationship="rootViewController" id="ToL-1U-SLX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oP1-cZ-FVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="289"/>
+        </scene>
         <!--Add New Card View Controller-->
         <scene sceneID="7KA-T2-pn6">
             <objects>
@@ -158,7 +192,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRd-q0-YW7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5699043-designer-wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="omZ-mg-db5">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e2b82aded815e80351b929a77519adaa--tropical-wallpapers-tropical-iphone-wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="omZ-mg-db5">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="936" id="Bwj-At-oeP"/>
@@ -179,7 +213,7 @@
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="WeX-Vi-foY">
                                                 <rect key="frame" x="34" y="411" width="307" height="162"/>
-                                                <color key="backgroundColor" red="0.2078429589494197" green="0.64482868020304562" blue="0.5411372089860329" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.9254191517829895" green="0.92553013563156128" blue="0.9253813624382019" alpha="0.3691941352739726" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iWinSoft-Barcode-Generator-logo" translatesAutoresizingMaskIntoConstraints="NO" id="mi1-Aq-0qv">
                                                 <rect key="frame" x="34" y="609" width="307" height="112"/>
@@ -187,14 +221,14 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-Jc-eWP">
                                                 <rect key="frame" x="34" y="207" width="307" height="162"/>
-                                                <color key="backgroundColor" red="0.2078429589494197" green="0.64482868020304562" blue="0.5411372089860329" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="0.40087221746575341" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="d2c-fH-PFe" appends="YES" id="NiX-50-aOV"/>
                                                 </connections>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.10607666522264481" green="0.37309449911117554" blue="0.29343113303184509" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.070607371628284454" green="0.15174409747123718" blue="0.22703376412391663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="936" id="3gt-6d-MPG"/>
                                             <constraint firstAttribute="trailing" secondItem="omZ-mg-db5" secondAttribute="trailing" id="46t-A7-eJ6"/>
@@ -232,7 +266,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXN-hs-PwG">
                                         <rect key="frame" x="0.0" y="832" width="375" height="104"/>
-                                        <color key="backgroundColor" red="0.088250197470188141" green="0.27852821350097656" blue="0.2314201295375824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.51906067132949829" green="0.84872692823410034" blue="0.97545403242111206" alpha="0.8224261558219178" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="CREATE">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -243,7 +277,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1060766652" green="0.37309449909999998" blue="0.29343113300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.070607371628284454" green="0.15174409747123718" blue="0.22703376412391663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="LRd-q0-YW7" firstAttribute="leading" secondItem="4wC-5E-tba" secondAttribute="leading" id="2mT-xo-QCm"/>
                                     <constraint firstItem="LRd-q0-YW7" firstAttribute="top" secondItem="4wC-5E-tba" secondAttribute="top" id="2xq-5N-2dq"/>
@@ -270,7 +304,6 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1060766652" green="0.37309449909999998" blue="0.29343113300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="4wC-5E-tba" secondAttribute="trailing" id="2MM-G6-Wks"/>
                             <constraint firstItem="4wC-5E-tba" firstAttribute="top" secondItem="GMR-d8-zbA" secondAttribute="top" constant="64" id="Btd-Lf-HgG"/>
@@ -301,6 +334,7 @@
     <resources>
         <image name="5699043-designer-wallpaper" width="480" height="300"/>
         <image name="credit-card-2" width="21" height="21"/>
+        <image name="e2b82aded815e80351b929a77519adaa--tropical-wallpapers-tropical-iphone-wallpaper" width="245" height="436"/>
         <image name="gear" width="21" height="21"/>
         <image name="iWinSoft-Barcode-Generator-logo" width="85" height="85"/>
         <image name="photoalbum" width="85" height="85"/>
