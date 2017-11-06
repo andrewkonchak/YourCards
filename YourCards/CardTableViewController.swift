@@ -9,9 +9,10 @@
 import UIKit
 import CoreData
 
-class CardTableViewController: UITableViewController {
+class CardTableViewController: UITableViewController{
     
     @IBOutlet weak var cardTableView: UITableView!
+    
     
     var managedObjectContext: NSManagedObjectContext? {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -31,7 +32,7 @@ class CardTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         retrieveCards()
@@ -43,6 +44,7 @@ class CardTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
     // MARK: - Table view data source
 
@@ -88,9 +90,7 @@ class CardTableViewController: UITableViewController {
         }
         
     }
-
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
