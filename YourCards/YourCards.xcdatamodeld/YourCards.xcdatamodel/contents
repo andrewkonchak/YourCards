@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13241" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Card" representedClassName="Card" syncable="YES">
-        <attribute name="backimage" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="barcode" transient="YES" attributeType="String" syncable="YES"/>
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="descriptioncard" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filtercolor" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="frontimage" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="name" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardBackImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardBarcode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cardDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardFrontImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardNumber" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Card" positionX="-63" positionY="-18" width="128" height="150"/>
