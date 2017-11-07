@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class CardTableViewController: UITableViewController{
+class CardTableViewController: UITableViewController {
     
     @IBOutlet weak var cardTableView: UITableView!
     
@@ -18,6 +18,7 @@ class CardTableViewController: UITableViewController{
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     
+    var cardManager = CardsManager()
     var cardsArray = [Card]()
     
     override func viewDidLoad() {
@@ -89,6 +90,37 @@ class CardTableViewController: UITableViewController{
             
         }
         
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (rowAction, indexPath) in
+            self.performSegue(withIdentifier: "Card", sender: self.cardsArray[indexPath.row])
+            
+        }
+        editAction.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        
+        let shareAction = UITableViewRowAction(style: .normal, title: "Share") { (rowAction, indexPath) in
+            //TODO:
+            
+        }
+        shareAction.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        
+        let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
+            self.cardManager.deleteCard(card: self.cardsArray[indexPath.row])
+            self.cardsArray.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+        deleteAction.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        
+        return [editAction, shareAction, deleteAction]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditToCard"{
+            let addEdit = segue.destination as! AddNewCardViewController
+            addEdit.editCard = sender as? Card
+        }
     }
     
     /*

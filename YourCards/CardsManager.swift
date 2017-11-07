@@ -33,4 +33,18 @@ class CardsManager {
 //}
 //
 //}
+    
+    func deleteCard(card: Card){
+        context.delete(card)
+        try? context.save()
+    }
+    
+    
+    
+    
+    
 }
+
+
+
+

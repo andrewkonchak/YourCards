@@ -9,14 +9,16 @@
 import UIKit
 
 class AddNewCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
     @IBOutlet weak var cardBarCode: UIImageView!
     @IBOutlet weak var cardBackImage: UIImageView!
     @IBOutlet weak var cardFrontImage: UIImageView!
     @IBOutlet weak var cardNameTextField: UITextField!
     @IBOutlet weak var cardNumberTextField: UITextField!
     
-      var userCards = CardsManager()
+    var userCards = CardsManager()
+    var editCard: Card?
+    var addCard: Card?
     
     @IBAction func createCardButton(_ sender: UIButton) {
         if cardNameTextField?.text != "" && cardNumberTextField?.text != ""  {
