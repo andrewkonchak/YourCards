@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import RSBarcodes_Swift
+import AVFoundation
+
+
 
 class AddNewCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
@@ -19,6 +23,13 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     var userCards = CardsManager()
     var editCard: Card?
     var addCard: Card?
+    
+    @IBOutlet weak var barcodeImageView: UIImageView!
+    
+    @IBAction func tapToCreateBarcode(_ sender: UIButton) {
+        barcodeImageView.image = RSUnifiedCodeGenerator.shared.generateCode(cardNumberTextField.text!, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue)
+        
+    }
     
     @IBAction func createCardButton(_ sender: UIButton) {
         if cardNameTextField?.text != "" && cardNumberTextField?.text != ""  {
@@ -37,16 +48,17 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cardFrontImage?.isUserInteractionEnabled = true
-
+        self.cardBackImage?.isUserInteractionEnabled = true
+        
         // Do any additional setup after loading the view.
     }
     
     
     
     
-
+    
     @IBAction func pickerCardImage(_ sender: UITapGestureRecognizer) {
-       
+        
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.allowsEditing = true
@@ -87,30 +99,31 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.cardFrontImage.image = image
-            
         }
     }
     
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+        
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    
 }

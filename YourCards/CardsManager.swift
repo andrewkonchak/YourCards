@@ -21,18 +21,18 @@ class CardsManager {
             print(error)
         }
     }
-//    func fetchCardsFromCoreData(completion: ([Card]?)->Void) {
-//        var results = [Card]()
-//        let request: NSFetchRequest<Card> = Card.fetchRequest()
-//            do {
-//                results = (try context.fetch(request) as [Card])
-//                
-//            } catch {
-//                print("Could not fetch Products from CoreData:\(error.localizedDescription)")
-//    
-//}
-//
-//}
+    //    func fetchCardsFromCoreData(completion: ([Card]?)->Void) {
+    //        var results = [Card]()
+    //        let request: NSFetchRequest<Card> = Card.fetchRequest()
+    //            do {
+    //                results = (try context.fetch(request) as [Card])
+    //                
+    //            } catch {
+    //                print("Could not fetch Products from CoreData:\(error.localizedDescription)")
+    //    
+    //}
+    //
+    //}
     
     func deleteCard(card: Card){
         context.delete(card)

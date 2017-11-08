@@ -1,0 +1,6 @@
+framework module Pods_YourCardsUITests {
+  umbrella header "Pods-YourCardsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
