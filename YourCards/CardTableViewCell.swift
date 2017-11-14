@@ -19,6 +19,9 @@ class CardTableViewCell: UITableViewCell {
         
         super.awakeFromNib()
         cardFrontImageViewCell.layer.cornerRadius = 12
+        cardFrontImageViewCell.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardFrontImageViewCell.layer.borderWidth = 2
+        
         // Initialization code
     }
     
@@ -28,13 +31,13 @@ class CardTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
      // MARK: - Convert base64String to UIImage
-    
+
     func convertBase64ToImage(base64String: String) -> UIImage {
         let decodedData = NSData(base64Encoded: base64String, options: NSData.Base64DecodingOptions(rawValue: 0))
         let decodedimage = UIImage(data: decodedData! as Data)
-        
+
         return decodedimage!
-        
+
     }
     
     func configureCell(card: Card){

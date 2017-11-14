@@ -41,13 +41,23 @@ class CardsManager {
     
     // MARK: - Convert from base64String to UIImage
     
-//    func convertBase64ToImage(base64String: String) -> UIImage {
-//        let decodedData = NSData(base64Encoded: base64String, options: NSData.Base64DecodingOptions(rawValue: 0))
-//        let decodedimage = UIImage(data: decodedData! as Data)
-//        
-//        return decodedimage!
-//        
-//    }
+    func convertBase64ToImage(base64String: String) -> UIImage {
+        let decodedData = NSData(base64Encoded: base64String, options: NSData.Base64DecodingOptions(rawValue: 0))
+        let decodedimage = UIImage(data: decodedData! as Data)
+        
+        return decodedimage!
+        
+    }
+    
+    // MARK: - Convert UIImage to base64String
+    
+    func convertImageToBase64(image: UIImage) -> String {
+        let imageData = UIImagePNGRepresentation(image)
+        let base64String = imageData?.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+        
+        return base64String ?? ""
+        
+    }
 }
 
 

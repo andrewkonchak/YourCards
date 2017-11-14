@@ -9,10 +9,13 @@
 import UIKit
 import CoreData
 
-class CardTableViewController: UITableViewController {
+class CardTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var cardTableView: UITableView!
     
+    @IBAction func searchBarItem(_ sender: UIBarButtonItem) {
+        createSearchBar()
+    }
     
     var managedObjectContext: NSManagedObjectContext? {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -32,6 +35,15 @@ class CardTableViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    // Custom search bar
+    func createSearchBar(){
+        let searchBar = UISearchBar()
+        searchBar.showsCancelButton = false
+        searchBar.placeholder = "Enter your search here!"
+        searchBar.delegate = self
+        self.navigationItem.titleView = searchBar
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -14,10 +14,10 @@
 		4952878A1FB9D17F0027122D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495287891FB9D17F0027122D /* Buttons.swift */; };
 		496899E41FB866DE00D86C14 /* SecretArkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496899E31FB866DE00D86C14 /* SecretArkitViewController.swift */; };
 		49689A2C1FB8704300D86C14 /* ARkitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49689A2B1FB8704300D86C14 /* ARkitModel.swift */; };
+		49719EF41FBB07FA003BFFD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49719EF31FBB07F9003BFFD6 /* Assets.xcassets */; };
 		498BA5151FA87C1900253737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BA5141FA87C1900253737 /* AppDelegate.swift */; };
 		498BA51A1FA87C1900253737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498BA5181FA87C1900253737 /* Main.storyboard */; };
 		498BA51D1FA87C1900253737 /* YourCards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 498BA51B1FA87C1900253737 /* YourCards.xcdatamodeld */; };
-		498BA51F1FA87C1900253737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498BA51E1FA87C1900253737 /* Assets.xcassets */; };
 		498BA5221FA87C1900253737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498BA5201FA87C1900253737 /* LaunchScreen.storyboard */; };
 		498BA52D1FA87C1900253737 /* YourCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BA52C1FA87C1900253737 /* YourCardsTests.swift */; };
 		498BA5381FA87C1900253737 /* YourCardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BA5371FA87C1900253737 /* YourCardsUITests.swift */; };
@@ -57,11 +57,11 @@
 		496899E31FB866DE00D86C14 /* SecretArkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretArkitViewController.swift; sourceTree = "<group>"; };
 		49689A2B1FB8704300D86C14 /* ARkitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARkitModel.swift; sourceTree = "<group>"; };
 		49689A2F1FB873A500D86C14 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		49719EF31FBB07F9003BFFD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		498BA5111FA87C1900253737 /* YourCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		498BA5141FA87C1900253737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		498BA5191FA87C1900253737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		498BA51C1FA87C1900253737 /* YourCards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YourCards.xcdatamodel; sourceTree = "<group>"; };
-		498BA51E1FA87C1900253737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		498BA5211FA87C1900253737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		498BA5231FA87C1900253737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498BA5281FA87C1900253737 /* YourCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +153,7 @@
 				498BA5181FA87C1900253737 /* Main.storyboard */,
 				49A695A61FB06F7200B63FC2 /* CardTableViewController.swift */,
 				49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */,
-				498BA51E1FA87C1900253737 /* Assets.xcassets */,
+				49719EF31FBB07F9003BFFD6 /* Assets.xcassets */,
 				498BA5201FA87C1900253737 /* LaunchScreen.storyboard */,
 				498BA5231FA87C1900253737 /* Info.plist */,
 				498BA51B1FA87C1900253737 /* YourCards.xcdatamodeld */,
@@ -319,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				498BA5221FA87C1900253737 /* LaunchScreen.storyboard in Resources */,
-				498BA51F1FA87C1900253737 /* Assets.xcassets in Resources */,
+				49719EF41FBB07FA003BFFD6 /* Assets.xcassets in Resources */,
 				498BA51A1FA87C1900253737 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

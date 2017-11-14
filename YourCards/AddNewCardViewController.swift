@@ -12,13 +12,14 @@ import AVFoundation
 
 
 
-class AddNewCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate{
+class AddNewCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UITextViewDelegate{
     
     @IBOutlet weak var cardBarCode: UIImageView!
     @IBOutlet weak var cardBackImage: UIImageView!
     @IBOutlet weak var cardFrontImage: UIImageView!
     @IBOutlet weak var cardNameTextField: UITextField!
     @IBOutlet weak var cardNumberTextField: UITextField!
+    @IBOutlet weak var cardDescriptionTextView: UITextView!
     
     var userCards = CardsManager()
     var editCard: Card?
@@ -55,14 +56,35 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         self.cardFrontImage?.isUserInteractionEnabled = true
         self.cardBackImage?.isUserInteractionEnabled = true
         
-        // UIImage round corners
+        // round corners and bordercolor
         cardFrontImage.layer.cornerRadius = 12
+        cardFrontImage.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardFrontImage.layer.borderWidth = 2
+       
         cardBackImage.layer.cornerRadius = 12
+        cardBackImage.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardBackImage.layer.borderWidth = 2
+       
         barcodeImageView.layer.cornerRadius = 12
+        barcodeImageView.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        barcodeImageView.layer.borderWidth = 2
+       
+        cardDescriptionTextView.layer.cornerRadius = 12
+        cardDescriptionTextView.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardDescriptionTextView.layer.borderWidth = 2
+       
+        cardNameTextField.layer.cornerRadius = 12
+        cardNameTextField.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardNameTextField.layer.borderWidth = 2
+        
+        cardNumberTextField.layer.cornerRadius = 12
+        cardNumberTextField.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardNumberTextField.layer.borderWidth = 2
         
         //hide keyboard
         self.cardNameTextField.delegate = self
         self.cardNumberTextField.delegate = self
+        self.cardDescriptionTextView.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -70,6 +92,8 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         cardNumberTextField.resignFirstResponder()
         cardNameTextField.resignFirstResponder()
+        cardDescriptionTextView.resignFirstResponder()
+        
         return true
     }
     
