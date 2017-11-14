@@ -12,7 +12,7 @@ import AVFoundation
 
 
 
-class AddNewCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class AddNewCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate{
     
     @IBOutlet weak var cardBarCode: UIImageView!
     @IBOutlet weak var cardBackImage: UIImageView!
@@ -50,7 +50,6 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cardFrontImage?.isUserInteractionEnabled = true
@@ -60,9 +59,19 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         cardFrontImage.layer.cornerRadius = 12
         cardBackImage.layer.cornerRadius = 12
         barcodeImageView.layer.cornerRadius = 12
+        
+        //hide keyboard
+        self.cardNameTextField.delegate = self
+        self.cardNumberTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
+    // Press return to hide keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        cardNumberTextField.resignFirstResponder()
+        cardNameTextField.resignFirstResponder()
+        return true
+    }
     
     @IBAction func tapFrontImage(_ sender: UITapGestureRecognizer) {
         TapOnImage = "frontImage"
@@ -142,6 +151,8 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     
     /*
