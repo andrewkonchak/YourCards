@@ -23,6 +23,7 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     var userCards = CardsManager()
     var editCard: Card?
     var addCard: Card?
+    var TapOnImage : String?
     
     @IBOutlet weak var barcodeImageView: UIImageView!
     
@@ -32,10 +33,14 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     }
     
     @IBAction func createCardButton(_ sender: UIButton) {
-        if cardNameTextField?.text != "" && cardNumberTextField?.text != ""  {
+        if cardNameTextField?.text != "" && cardNumberTextField?.text != "" &&  cardFrontImage.image != nil &&  cardBackImage.image != nil {
             let addUserCard = Card(context: userCards.context)
             addUserCard.cardNumber = cardNumberTextField!.text!
             addUserCard.cardName = cardNameTextField!.text!
+//           addUserCard.cardDescription  = !.text!
+            addUserCard.cardDate = Date()
+            addUserCard.cardFrontImage = convertImageToBase64(image: (cardFrontImage?.image)!)
+            addUserCard.cardBackImage = convertImageToBase64(image: (cardBackImage?.image)!)
             userCards.createNewCards(createCard: addUserCard)
         } else {
             let alertController = UIAlertController(title: "OOPS", message: "You need to give all the informations required to save this product", preferredStyle: .alert)
@@ -45,19 +50,30 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cardFrontImage?.isUserInteractionEnabled = true
         self.cardBackImage?.isUserInteractionEnabled = true
         
+        // UIImage round corners
+        cardFrontImage.layer.cornerRadius = 12
+        cardBackImage.layer.cornerRadius = 12
+        barcodeImageView.layer.cornerRadius = 12
         // Do any additional setup after loading the view.
     }
     
     
+    @IBAction func tapFrontImage(_ sender: UITapGestureRecognizer) {
+        TapOnImage = "frontImage"
+        pickerCardImage()
+    }
+    @IBAction func tapBackImage(_ sender: UITapGestureRecognizer) {
+         TapOnImage = "backImage"
+        pickerCardImage()
+    }
     
-    
-    
-    @IBAction func pickerCardImage(_ sender: UITapGestureRecognizer) {
+    func pickerCardImage() {
         
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
@@ -96,17 +112,30 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         self.dismiss(animated: true, completion: nil)
-        
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.cardFrontImage.image = image
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            if TapOnImage == "frontImage"{
+                cardFrontImage.image = image
+            }else{
+                cardBackImage.image = image
+            }
         }
-    }
     
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
         
     }
+    
+    // MARK: - Convert UIImage to base64String
+    
+    func convertImageToBase64(image: UIImage) -> String {
+        let imageData = UIImagePNGRepresentation(image)
+        let base64String = imageData?.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+        
+        return base64String ?? ""
+        
+    }
+    
     
     
     override func didReceiveMemoryWarning() {

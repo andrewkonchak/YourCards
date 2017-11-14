@@ -10,6 +10,10 @@
 		33FFE945D90BFB098035D22C /* Pods_YourCardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52818D7D932E1F08062A74F5 /* Pods_YourCardsTests.framework */; };
 		491925C51FB07AD500E1184D /* CardCoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491925C31FB07AD500E1184D /* CardCoreDataClass.swift */; };
 		4919FA3D1FAF8CC300B4D8F8 /* AddNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */; };
+		49479C2D1FB9F9B900B5DA5E /* CardFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */; };
+		4952878A1FB9D17F0027122D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495287891FB9D17F0027122D /* Buttons.swift */; };
+		496899E41FB866DE00D86C14 /* SecretArkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496899E31FB866DE00D86C14 /* SecretArkitViewController.swift */; };
+		49689A2C1FB8704300D86C14 /* ARkitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49689A2B1FB8704300D86C14 /* ARkitModel.swift */; };
 		498BA5151FA87C1900253737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BA5141FA87C1900253737 /* AppDelegate.swift */; };
 		498BA51A1FA87C1900253737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498BA5181FA87C1900253737 /* Main.storyboard */; };
 		498BA51D1FA87C1900253737 /* YourCards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 498BA51B1FA87C1900253737 /* YourCards.xcdatamodeld */; };
@@ -48,6 +52,11 @@
 		3520D83DCE9F6419BBEECDCC /* Pods_YourCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		491925C31FB07AD500E1184D /* CardCoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCoreDataClass.swift; sourceTree = "<group>"; };
 		4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardViewController.swift; sourceTree = "<group>"; };
+		49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFullViewController.swift; sourceTree = "<group>"; };
+		495287891FB9D17F0027122D /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		496899E31FB866DE00D86C14 /* SecretArkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretArkitViewController.swift; sourceTree = "<group>"; };
+		49689A2B1FB8704300D86C14 /* ARkitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARkitModel.swift; sourceTree = "<group>"; };
+		49689A2F1FB873A500D86C14 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		498BA5111FA87C1900253737 /* YourCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		498BA5141FA87C1900253737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		498BA5191FA87C1900253737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +108,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49689A301FB87A9C00D86C14 /* ARKit */ = {
+			isa = PBXGroup;
+			children = (
+				49689A2B1FB8704300D86C14 /* ARkitModel.swift */,
+				496899E31FB866DE00D86C14 /* SecretArkitViewController.swift */,
+				49689A2F1FB873A500D86C14 /* art.scnassets */,
+			);
+			path = ARKit;
+			sourceTree = "<group>";
+		};
 		498BA5081FA87C1900253737 = {
 			isa = PBXGroup;
 			children = (
@@ -124,13 +143,16 @@
 		498BA5131FA87C1900253737 /* YourCards */ = {
 			isa = PBXGroup;
 			children = (
+				49689A301FB87A9C00D86C14 /* ARKit */,
 				491925C31FB07AD500E1184D /* CardCoreDataClass.swift */,
 				498BA5141FA87C1900253737 /* AppDelegate.swift */,
 				498BA54D1FA8868500253737 /* CardsManager.swift */,
+				495287891FB9D17F0027122D /* Buttons.swift */,
 				4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */,
 				49A695A41FB06B2200B63FC2 /* CardTableViewCell.swift */,
 				498BA5181FA87C1900253737 /* Main.storyboard */,
 				49A695A61FB06F7200B63FC2 /* CardTableViewController.swift */,
+				49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */,
 				498BA51E1FA87C1900253737 /* Assets.xcassets */,
 				498BA5201FA87C1900253737 /* LaunchScreen.storyboard */,
 				498BA5231FA87C1900253737 /* Info.plist */,
@@ -475,7 +497,11 @@
 			files = (
 				491925C51FB07AD500E1184D /* CardCoreDataClass.swift in Sources */,
 				49A695A51FB06B2200B63FC2 /* CardTableViewCell.swift in Sources */,
+				496899E41FB866DE00D86C14 /* SecretArkitViewController.swift in Sources */,
+				49689A2C1FB8704300D86C14 /* ARkitModel.swift in Sources */,
 				498BA5151FA87C1900253737 /* AppDelegate.swift in Sources */,
+				4952878A1FB9D17F0027122D /* Buttons.swift in Sources */,
+				49479C2D1FB9F9B900B5DA5E /* CardFullViewController.swift in Sources */,
 				4919FA3D1FAF8CC300B4D8F8 /* AddNewCardViewController.swift in Sources */,
 				498BA54E1FA8868500253737 /* CardsManager.swift in Sources */,
 				498BA51D1FA87C1900253737 /* YourCards.xcdatamodeld in Sources */,
@@ -650,7 +676,7 @@
 				DEVELOPMENT_TEAM = AW262URD2Z;
 				INFOPLIST_FILE = YourCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Andrew-Konchak.YourCards";
+				PRODUCT_BUNDLE_IDENTIFIER = "Andrew-KonchakYourCards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -666,7 +692,7 @@
 				DEVELOPMENT_TEAM = AW262URD2Z;
 				INFOPLIST_FILE = YourCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Andrew-Konchak.YourCards";
+				PRODUCT_BUNDLE_IDENTIFIER = "Andrew-KonchakYourCards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

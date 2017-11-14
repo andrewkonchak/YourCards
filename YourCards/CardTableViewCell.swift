@@ -14,9 +14,11 @@ class CardTableViewCell: UITableViewCell {
     @IBOutlet weak var cardNameLabelCell: UILabel!
     @IBOutlet weak var cardFrontImageViewCell: UIImageView!
     
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()
+        cardFrontImageViewCell.layer.cornerRadius = 12
         // Initialization code
     }
     
@@ -25,10 +27,20 @@ class CardTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+     // MARK: - Convert base64String to UIImage
+    
+    func convertBase64ToImage(base64String: String) -> UIImage {
+        let decodedData = NSData(base64Encoded: base64String, options: NSData.Base64DecodingOptions(rawValue: 0))
+        let decodedimage = UIImage(data: decodedData! as Data)
+        
+        return decodedimage!
+        
+    }
     
     func configureCell(card: Card){
         self.cardNameLabelCell.text = card.cardName
-        //        self.cardFrontImageViewCell.image = UIImage(data: (card.cardFrontImage as? Data)!)
+        self.cardFrontImageViewCell.image = convertBase64ToImage(base64String: card.cardFrontImage!)
+        self.cardDateLabelCell?.text = DateFormatter.localizedString(from: card.cardDate!, dateStyle: DateFormatter.Style.long, timeStyle: DateFormatter.Style.none)
     }
     
 }

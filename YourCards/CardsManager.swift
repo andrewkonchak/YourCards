@@ -39,10 +39,15 @@ class CardsManager {
         try? context.save()
     }
     
+    // MARK: - Convert from base64String to UIImage
     
-    
-    
-    
+//    func convertBase64ToImage(base64String: String) -> UIImage {
+//        let decodedData = NSData(base64Encoded: base64String, options: NSData.Base64DecodingOptions(rawValue: 0))
+//        let decodedimage = UIImage(data: decodedData! as Data)
+//        
+//        return decodedimage!
+//        
+//    }
 }
 
 

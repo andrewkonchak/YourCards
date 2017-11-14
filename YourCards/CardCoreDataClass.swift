@@ -19,7 +19,7 @@ public class Card: NSManagedObject {
     
     @NSManaged public var cardName: String?
     @NSManaged public var cardNumber: String?
-    @NSManaged public var cardDate: NSDate?
+    @NSManaged public var cardDate: Date?
     @NSManaged public var cardDescription: String?
     @NSManaged public var cardFrontImage: String?
     @NSManaged public var cardBackImage: String?

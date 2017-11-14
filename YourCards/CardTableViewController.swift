@@ -116,7 +116,7 @@ class CardTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addEditCell"{
+        if segue.identifier == "Cell"{
             let editCell = segue.destination as! AddNewCardViewController
             editCell.editCard = sender as? Card
         }
