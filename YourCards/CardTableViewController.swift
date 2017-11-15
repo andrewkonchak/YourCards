@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 class CardTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var cardTableView: UITableView!
@@ -104,10 +105,19 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
         
     }
     
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: performSegue(withIdentifier: "cardToFullView", sender: cardsArray[IndexPath.row])
+//    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "cardToFullView", sender: cardsArray[indexPath.row])
+    }
+    
+    
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (rowAction, indexPath) in
-            self.performSegue(withIdentifier: "Card", sender: self.cardsArray[indexPath.row])
+            self.performSegue(withIdentifier: "cellId", sender: self.cardsArray[indexPath.row])
             
         }
         editAction.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
@@ -128,11 +138,17 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Cell"{
+        if segue.identifier == "cellId"{
             let editCell = segue.destination as! AddNewCardViewController
             editCell.editCard = sender as? Card
+        }else if segue.identifier == "cardToFullView"{
+            let editUserCard = segue.destination as! CardFullViewController
+            editUserCard.cardFromCell = sender as? Card
         }
     }
+    
+    
+
     
     /*
      // Override to support conditional editing of the table view.

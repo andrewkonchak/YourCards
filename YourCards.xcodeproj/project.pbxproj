@@ -12,6 +12,8 @@
 		4919FA3D1FAF8CC300B4D8F8 /* AddNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */; };
 		49479C2D1FB9F9B900B5DA5E /* CardFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */; };
 		4952878A1FB9D17F0027122D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495287891FB9D17F0027122D /* Buttons.swift */; };
+		4966402C1FBC4A4D004FDA39 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966402B1FBC4A4D004FDA39 /* SettingsTableViewCell.swift */; };
+		4966402E1FBC4AEE004FDA39 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966402D1FBC4AEE004FDA39 /* SettingsTableViewController.swift */; };
 		496899E41FB866DE00D86C14 /* SecretArkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496899E31FB866DE00D86C14 /* SecretArkitViewController.swift */; };
 		49689A2C1FB8704300D86C14 /* ARkitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49689A2B1FB8704300D86C14 /* ARkitModel.swift */; };
 		49719EF41FBB07FA003BFFD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49719EF31FBB07F9003BFFD6 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardViewController.swift; sourceTree = "<group>"; };
 		49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFullViewController.swift; sourceTree = "<group>"; };
 		495287891FB9D17F0027122D /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		4966402B1FBC4A4D004FDA39 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		4966402D1FBC4AEE004FDA39 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		496899E31FB866DE00D86C14 /* SecretArkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretArkitViewController.swift; sourceTree = "<group>"; };
 		49689A2B1FB8704300D86C14 /* ARkitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARkitModel.swift; sourceTree = "<group>"; };
 		49689A2F1FB873A500D86C14 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */,
 				49A695A41FB06B2200B63FC2 /* CardTableViewCell.swift */,
 				498BA5181FA87C1900253737 /* Main.storyboard */,
+				4966402B1FBC4A4D004FDA39 /* SettingsTableViewCell.swift */,
+				4966402D1FBC4AEE004FDA39 /* SettingsTableViewController.swift */,
 				49A695A61FB06F7200B63FC2 /* CardTableViewController.swift */,
 				49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */,
 				49719EF31FBB07F9003BFFD6 /* Assets.xcassets */,
@@ -496,7 +502,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				491925C51FB07AD500E1184D /* CardCoreDataClass.swift in Sources */,
+				4966402E1FBC4AEE004FDA39 /* SettingsTableViewController.swift in Sources */,
 				49A695A51FB06B2200B63FC2 /* CardTableViewCell.swift in Sources */,
+				4966402C1FBC4A4D004FDA39 /* SettingsTableViewCell.swift in Sources */,
 				496899E41FB866DE00D86C14 /* SecretArkitViewController.swift in Sources */,
 				49689A2C1FB8704300D86C14 /* ARkitModel.swift in Sources */,
 				498BA5151FA87C1900253737 /* AppDelegate.swift in Sources */,

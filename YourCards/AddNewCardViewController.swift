@@ -34,11 +34,12 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     }
     
     @IBAction func createCardButton(_ sender: UIButton) {
+        if editCard == nil {
         if cardNameTextField?.text != "" && cardNumberTextField?.text != "" &&  cardFrontImage.image != nil &&  cardBackImage.image != nil {
             let addUserCard = Card(context: userCards.context)
             addUserCard.cardNumber = cardNumberTextField!.text!
             addUserCard.cardName = cardNameTextField!.text!
-//           addUserCard.cardDescription  = !.text!
+            addUserCard.cardDescription  = cardDescriptionTextView!.text!
             addUserCard.cardDate = Date()
             addUserCard.cardFrontImage = convertImageToBase64(image: (cardFrontImage?.image)!)
             addUserCard.cardBackImage = convertImageToBase64(image: (cardBackImage?.image)!)
@@ -49,30 +50,65 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
             alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }
+        } else {
+            editCard?.cardName = cardNameTextField!.text!
+            editCard?.cardNumber = cardNumberTextField!.text!
+            editCard?.cardDescription = cardDescriptionTextView!.text!
+             editCard?.cardFrontImage = convertImageToBase64(image: (cardFrontImage?.image)!)
+             editCard?.cardBackImage = convertImageToBase64(image: (cardBackImage?.image)!)
+            
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cardFrontImage?.isUserInteractionEnabled = true
         self.cardBackImage?.isUserInteractionEnabled = true
+        addCardRoundCorners()
+        loadImage()
         
-        // round corners and bordercolor
+        //hide keyboard
+        self.cardNameTextField.delegate = self
+        self.cardNumberTextField.delegate = self
+        self.cardDescriptionTextView.delegate = self
+        // Do any additional setup after loading the view.
+    }
+    
+    // Load Data from full view to add card
+    func loadImage(){
+        if editCard != nil {
+            cardNameTextField.text = editCard?.cardName
+            cardDescriptionTextView.text = editCard?.cardDescription
+            cardNumberTextField.text = editCard?.cardNumber
+            cardFrontImage.image = userCards.convertBase64ToImage(base64String: (editCard?.cardFrontImage)!)
+            cardBackImage.image = userCards.convertBase64ToImage(base64String: (editCard?.cardBackImage)!)
+            cardBarCode?.image = RSUnifiedCodeGenerator.shared.generateCode(cardNumberTextField.text!, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue)
+        }
+        
+    }
+    
+    
+    
+    
+    // round corners and bordercolor
+    func addCardRoundCorners(){
+        
         cardFrontImage.layer.cornerRadius = 12
         cardFrontImage.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
         cardFrontImage.layer.borderWidth = 2
-       
+        
         cardBackImage.layer.cornerRadius = 12
         cardBackImage.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
         cardBackImage.layer.borderWidth = 2
-       
+        
         barcodeImageView.layer.cornerRadius = 12
         barcodeImageView.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
         barcodeImageView.layer.borderWidth = 2
-       
+        
         cardDescriptionTextView.layer.cornerRadius = 12
         cardDescriptionTextView.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
         cardDescriptionTextView.layer.borderWidth = 2
-       
+        
         cardNameTextField.layer.cornerRadius = 12
         cardNameTextField.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
         cardNameTextField.layer.borderWidth = 2
@@ -81,11 +117,6 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         cardNumberTextField.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
         cardNumberTextField.layer.borderWidth = 2
         
-        //hide keyboard
-        self.cardNameTextField.delegate = self
-        self.cardNumberTextField.delegate = self
-        self.cardDescriptionTextView.delegate = self
-        // Do any additional setup after loading the view.
     }
     
     // Press return to hide keyboard
@@ -168,9 +199,7 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         return base64String ?? ""
         
     }
-    
-    
-    
+     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
