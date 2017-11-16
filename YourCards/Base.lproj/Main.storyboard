@@ -222,28 +222,17 @@
                                             <constraint firstAttribute="height" constant="125" id="g2A-vq-wZm"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BARCODE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bV5-I2-veZ">
-                                        <rect key="frame" x="139.66666666666666" y="293" width="134.99999999999997" height="63"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="63" id="YDS-cp-VIr"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="VEH-pK-VLv" firstAttribute="trailing" secondItem="Zby-Ti-N9t" secondAttribute="trailing" constant="-449" id="0tY-1C-7p7"/>
                                     <constraint firstAttribute="bottom" secondItem="vWZ-Lp-cmQ" secondAttribute="bottom" id="3Aw-Yq-7Cw"/>
                                     <constraint firstItem="vWZ-Lp-cmQ" firstAttribute="top" secondItem="Zby-Ti-N9t" secondAttribute="top" id="9qb-FC-UZ7"/>
                                     <constraint firstItem="vWZ-Lp-cmQ" firstAttribute="top" secondItem="ktB-UK-dcS" secondAttribute="top" id="Btc-z7-zel"/>
-                                    <constraint firstItem="bV5-I2-veZ" firstAttribute="centerX" secondItem="VEH-pK-VLv" secondAttribute="centerX" id="FWX-yE-usr"/>
                                     <constraint firstItem="VEH-pK-VLv" firstAttribute="top" secondItem="Jl1-Td-IlH" secondAttribute="bottom" constant="43" id="M0c-JF-AJD"/>
                                     <constraint firstItem="vWZ-Lp-cmQ" firstAttribute="centerY" secondItem="Zby-Ti-N9t" secondAttribute="centerY" id="Nab-An-OgY"/>
                                     <constraint firstItem="VEH-pK-VLv" firstAttribute="leading" secondItem="Zby-Ti-N9t" secondAttribute="leading" constant="36" id="Uft-Or-7KU"/>
                                     <constraint firstItem="vWZ-Lp-cmQ" firstAttribute="leading" secondItem="Zby-Ti-N9t" secondAttribute="leading" id="bQG-nY-qyi"/>
                                     <constraint firstItem="vWZ-Lp-cmQ" firstAttribute="bottom" secondItem="ktB-UK-dcS" secondAttribute="bottom" id="pLt-gT-oCi"/>
-                                    <constraint firstItem="bV5-I2-veZ" firstAttribute="top" secondItem="Zby-Ti-N9t" secondAttribute="top" constant="293" id="rUa-VM-eiw"/>
                                     <constraint firstItem="ktB-UK-dcS" firstAttribute="leading" secondItem="vWZ-Lp-cmQ" secondAttribute="trailing" id="tXN-Nj-QSS"/>
                                     <constraint firstItem="VEH-pK-VLv" firstAttribute="top" secondItem="Zby-Ti-N9t" secondAttribute="top" constant="261" id="wZL-0k-J6f"/>
                                     <constraint firstAttribute="trailing" secondItem="ktB-UK-dcS" secondAttribute="trailing" id="yAI-DX-KrL"/>

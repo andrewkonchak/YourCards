@@ -158,7 +158,10 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
         }
         editAction.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         
-        let shareAction = UITableViewRowAction(style: .normal, title: "Share") { (rowAction, indexPath) in 
+        let shareAction = UITableViewRowAction(style: .normal, title: "Share") { (rowAction, indexPath) in
+            let shareVC = UIActivityViewController(activityItems: [self.cardManager.convertBase64ToImage(base64String: self.cardsArray[indexPath.row].cardBackImage!),self.cardsArray[indexPath.row].cardName!, self.cardsArray[indexPath.row].cardNumber!], applicationActivities: nil)
+            self.present(shareVC, animated: true, completion: nil)
+            
         }
         
         shareAction.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
