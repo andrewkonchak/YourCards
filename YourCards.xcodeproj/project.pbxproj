@@ -12,7 +12,6 @@
 		4919FA3D1FAF8CC300B4D8F8 /* AddNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */; };
 		49479C2D1FB9F9B900B5DA5E /* CardFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */; };
 		4952878A1FB9D17F0027122D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495287891FB9D17F0027122D /* Buttons.swift */; };
-		4966402C1FBC4A4D004FDA39 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966402B1FBC4A4D004FDA39 /* SettingsTableViewCell.swift */; };
 		4966402E1FBC4AEE004FDA39 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966402D1FBC4AEE004FDA39 /* SettingsTableViewController.swift */; };
 		496640401FBC937F004FDA39 /* ARKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966403F1FBC937F004FDA39 /* ARKitViewController.swift */; };
 		496640441FBC94AC004FDA39 /* SpaceShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496640431FBC94AC004FDA39 /* SpaceShip.swift */; };
@@ -59,7 +58,6 @@
 		4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardViewController.swift; sourceTree = "<group>"; };
 		49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFullViewController.swift; sourceTree = "<group>"; };
 		495287891FB9D17F0027122D /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		4966402B1FBC4A4D004FDA39 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		4966402D1FBC4AEE004FDA39 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4966403F1FBC937F004FDA39 /* ARKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARKitViewController.swift; sourceTree = "<group>"; };
 		496640431FBC94AC004FDA39 /* SpaceShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceShip.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */,
 				49A695A41FB06B2200B63FC2 /* CardTableViewCell.swift */,
 				498BA5181FA87C1900253737 /* Main.storyboard */,
-				4966402B1FBC4A4D004FDA39 /* SettingsTableViewCell.swift */,
 				4966402D1FBC4AEE004FDA39 /* SettingsTableViewController.swift */,
 				49A695A61FB06F7200B63FC2 /* CardTableViewController.swift */,
 				49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */,
@@ -515,7 +512,6 @@
 				4966402E1FBC4AEE004FDA39 /* SettingsTableViewController.swift in Sources */,
 				496640401FBC937F004FDA39 /* ARKitViewController.swift in Sources */,
 				49A695A51FB06B2200B63FC2 /* CardTableViewCell.swift in Sources */,
-				4966402C1FBC4A4D004FDA39 /* SettingsTableViewCell.swift in Sources */,
 				498BA5151FA87C1900253737 /* AppDelegate.swift in Sources */,
 				4952878A1FB9D17F0027122D /* Buttons.swift in Sources */,
 				49479C2D1FB9F9B900B5DA5E /* CardFullViewController.swift in Sources */,

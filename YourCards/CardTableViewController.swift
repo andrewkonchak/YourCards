@@ -41,6 +41,7 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    
     // Custom search bar
     func createSearchBar(){
         let searchBar = UISearchBar()
