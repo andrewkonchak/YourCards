@@ -32,10 +32,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Secret Arkit View Controller-->
+        <!--Kit View Controller-->
         <scene sceneID="7pU-Dx-ULe">
             <objects>
-                <viewController id="1CZ-A3-gnG" customClass="SecretArkitViewController" customModule="YourCards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1CZ-A3-gnG" customClass="ARKitViewController" customModule="YourCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CvD-nW-qlT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,13 +64,28 @@
                         <viewLayoutGuide key="safeArea" id="A9T-bZ-eTZ"/>
                     </view>
                     <connections>
-                        <outlet property="counterLabel" destination="Flg-Dj-J4g" id="ZyF-s4-x5z"/>
-                        <outlet property="sceneView" destination="m7C-fu-DvT" id="yz9-Wl-y6d"/>
+                        <outlet property="counterLabel" destination="Flg-Dj-J4g" id="ZvP-Dn-Top"/>
+                        <outlet property="sceneView" destination="m7C-fu-DvT" id="FO6-a1-cqQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gay-Mw-59r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2903" y="-435"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YlJ-go-cS3">
+            <objects>
+                <viewController id="F9n-vL-Pfz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0oH-He-lTU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="21i-Xk-Vjw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUJ-MI-Bgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19" y="-1268"/>
         </scene>
         <!--Card Full View Controller-->
         <scene sceneID="ZLU-6K-O2f">
@@ -200,24 +215,35 @@
                                             <constraint firstAttribute="width" constant="414" id="gop-Z2-rhB"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-11-15 at 11.25.43 AM" translatesAutoresizingMaskIntoConstraints="NO" id="VEH-pK-VLv">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VEH-pK-VLv">
                                         <rect key="frame" x="36" y="261" width="343" height="125"/>
                                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="125" id="g2A-vq-wZm"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BARCODE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bV5-I2-veZ">
+                                        <rect key="frame" x="139.66666666666666" y="293" width="134.99999999999997" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="YDS-cp-VIr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="VEH-pK-VLv" firstAttribute="trailing" secondItem="Zby-Ti-N9t" secondAttribute="trailing" constant="-449" id="0tY-1C-7p7"/>
                                     <constraint firstAttribute="bottom" secondItem="vWZ-Lp-cmQ" secondAttribute="bottom" id="3Aw-Yq-7Cw"/>
                                     <constraint firstItem="vWZ-Lp-cmQ" firstAttribute="top" secondItem="Zby-Ti-N9t" secondAttribute="top" id="9qb-FC-UZ7"/>
                                     <constraint firstItem="vWZ-Lp-cmQ" firstAttribute="top" secondItem="ktB-UK-dcS" secondAttribute="top" id="Btc-z7-zel"/>
+                                    <constraint firstItem="bV5-I2-veZ" firstAttribute="centerX" secondItem="VEH-pK-VLv" secondAttribute="centerX" id="FWX-yE-usr"/>
                                     <constraint firstItem="VEH-pK-VLv" firstAttribute="top" secondItem="Jl1-Td-IlH" secondAttribute="bottom" constant="43" id="M0c-JF-AJD"/>
                                     <constraint firstItem="vWZ-Lp-cmQ" firstAttribute="centerY" secondItem="Zby-Ti-N9t" secondAttribute="centerY" id="Nab-An-OgY"/>
                                     <constraint firstItem="VEH-pK-VLv" firstAttribute="leading" secondItem="Zby-Ti-N9t" secondAttribute="leading" constant="36" id="Uft-Or-7KU"/>
                                     <constraint firstItem="vWZ-Lp-cmQ" firstAttribute="leading" secondItem="Zby-Ti-N9t" secondAttribute="leading" id="bQG-nY-qyi"/>
                                     <constraint firstItem="vWZ-Lp-cmQ" firstAttribute="bottom" secondItem="ktB-UK-dcS" secondAttribute="bottom" id="pLt-gT-oCi"/>
+                                    <constraint firstItem="bV5-I2-veZ" firstAttribute="top" secondItem="Zby-Ti-N9t" secondAttribute="top" constant="293" id="rUa-VM-eiw"/>
                                     <constraint firstItem="ktB-UK-dcS" firstAttribute="leading" secondItem="vWZ-Lp-cmQ" secondAttribute="trailing" id="tXN-Nj-QSS"/>
                                     <constraint firstItem="VEH-pK-VLv" firstAttribute="top" secondItem="Zby-Ti-N9t" secondAttribute="top" constant="261" id="wZL-0k-J6f"/>
                                     <constraint firstAttribute="trailing" secondItem="ktB-UK-dcS" secondAttribute="trailing" id="yAI-DX-KrL"/>
@@ -245,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4i-4s-cSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1212" y="-1268"/>
+            <point key="canvasLocation" x="1211.5942028985507" y="-1268.4782608695652"/>
         </scene>
         <!--YourCards-->
         <scene sceneID="ZP2-Gs-ORU">

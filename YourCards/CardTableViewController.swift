@@ -24,6 +24,9 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
     
     var cardManager = CardsManager()
     var cardsArray = [Card]()
+    var shareCardImage: Card?
+    var userSearch = [Card]()
+    var searchUserBar: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +45,45 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
     func createSearchBar(){
         let searchBar = UISearchBar()
         searchBar.showsCancelButton = false
-        searchBar.placeholder = "Enter your search here!"
+        searchBar.placeholder = "Search your card here!"
         searchBar.delegate = self
         self.navigationItem.titleView = searchBar
     }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchUserBar = true;
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchUserBar = false;
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchUserBar = false;
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchUserBar = false;
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        userSearch = cardsArray.filter({ (card) -> Bool in
+            let tmp: NSString = (card.cardName as NSString?)!
+            let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+            return range.location != NSNotFound
+        })
+        
+        print(searchText)
+        if (userSearch.count == 0) {
+            searchUserBar = false;
+        } else {
+            searchUserBar = true;
+        }
+        cardTableView.reloadData()
+        
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -76,13 +114,11 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CardTableViewCell
-        
         // Configure the cell...
         cell.configureCell(card:cardsArray[indexPath.row])
-        
         return cell
     }
-    
+
     func retrieveCards(){
         fetchCardsFromCoreData { (cards) in
             if let cards = cards {
@@ -122,9 +158,9 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
         }
         editAction.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         
-        let shareAction = UITableViewRowAction(style: .normal, title: "Share") { (rowAction, indexPath) in
-            
+        let shareAction = UITableViewRowAction(style: .normal, title: "Share") { (rowAction, indexPath) in 
         }
+        
         shareAction.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         
         let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
@@ -146,9 +182,6 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
             editUserCard.cardFromCell = sender as? Card
         }
     }
-    
-    
-
     
     /*
      // Override to support conditional editing of the table view.
