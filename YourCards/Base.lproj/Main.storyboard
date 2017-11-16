@@ -44,7 +44,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                             </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flg-Dj-J4g">
-                                <rect key="frame" x="168" y="583" width="78" height="153"/>
+                                <rect key="frame" x="168" y="627" width="78" height="60"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="49"/>
                                 <color key="textColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -495,48 +495,36 @@
         <!--Add New Card View Controller-->
         <scene sceneID="7KA-T2-pn6">
             <objects>
-                <viewController id="DVt-7R-ech" customClass="AddNewCardViewController" customModule="YourCards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddCardVC" id="DVt-7R-ech" customClass="AddNewCardViewController" customModule="YourCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GMR-d8-zbA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wC-5E-tba">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1180"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1087"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRd-q0-YW7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1180"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wP-1y-KFU">
-                                                <rect key="frame" x="34" y="732" width="307" height="30"/>
+                                                <rect key="frame" x="34" y="732" width="307" height="35.666666666666629"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-11-15 at 11.25.43 AM" translatesAutoresizingMaskIntoConstraints="NO" id="mi1-Aq-0qv">
-                                                <rect key="frame" x="34" y="637" width="307" height="87"/>
+                                                <rect key="frame" x="34" y="637" width="307" height="92.666666666666629"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barcode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f36-Xp-Mra">
-                                                <rect key="frame" x="34" y="600" width="307" height="29"/>
+                                                <rect key="frame" x="34" y="605.66666666666663" width="307" height="23.333333333333371"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXN-hs-PwG">
-                                                <rect key="frame" x="0.0" y="1032" width="375" height="104"/>
-                                                <color key="backgroundColor" red="0.2266106336" green="0.67997894699999994" blue="0.55074835720000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="70"/>
-                                                <state key="normal" title="CREATE">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="createCardButton:" destination="DVt-7R-ech" eventType="touchUpInside" id="tf7-iv-mDv"/>
-                                                    <segue destination="hBs-ek-zc4" kind="show" id="ih6-6X-7RU"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO6-GC-unv" customClass="MyButton" customModule="YourCards" customModuleProvider="target">
-                                                <rect key="frame" x="34" y="770" width="307" height="47"/>
+                                                <rect key="frame" x="34" y="770" width="307" height="52.666666666666629"/>
                                                 <color key="backgroundColor" red="0.22661063357520952" green="0.67997894704644457" blue="0.55074835723886273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="22"/>
                                                 <state key="normal" title="Tap to generate barcode">
@@ -550,7 +538,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description (optional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdy-aj-8ut">
-                                                <rect key="frame" x="34" y="840" width="307" height="29"/>
+                                                <rect key="frame" x="34" y="845.66666666666663" width="307" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="9cq-9N-1rB"/>
                                                 </constraints>
@@ -565,13 +553,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add front image:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQF-oX-OQS">
-                                                <rect key="frame" x="34" y="114" width="307" height="29"/>
+                                                <rect key="frame" x="34" y="119.66666666666664" width="307" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WeX-Vi-foY">
-                                                <rect key="frame" x="34" y="398" width="307" height="192"/>
+                                                <rect key="frame" x="34" y="398" width="307" height="197.66666666666663"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
                                                 <connections>
@@ -579,19 +567,19 @@
                                                 </connections>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add back image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zn-xM-IWc">
-                                                <rect key="frame" x="34" y="361" width="307" height="29"/>
+                                                <rect key="frame" x="34" y="366.66666666666669" width="307" height="23.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VV8-Fl-kmO">
-                                                <rect key="frame" x="34" y="877" width="307" height="115"/>
+                                                <rect key="frame" x="34" y="882.66666666666663" width="307" height="109.33333333333337"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-Jc-eWP">
-                                                <rect key="frame" x="34" y="151" width="307" height="195"/>
+                                                <rect key="frame" x="34" y="151" width="307" height="200.66666666666663"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
                                                 <connections>
@@ -599,16 +587,28 @@
                                                 </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbW-tF-MmC">
-                                                <rect key="frame" x="34" y="65" width="307" height="30"/>
+                                                <rect key="frame" x="34" y="65" width="307" height="35.666666666666657"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXN-hs-PwG">
+                                                <rect key="frame" x="0.0" y="1070" width="375" height="109.66666666666674"/>
+                                                <color key="backgroundColor" red="0.2266106336" green="0.67997894699999994" blue="0.55074835720000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="70"/>
+                                                <state key="normal" title="CREATE">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="createCardButton:" destination="DVt-7R-ech" eventType="touchUpInside" id="tf7-iv-mDv"/>
+                                                    <segue destination="hBs-ek-zc4" kind="show" id="ih6-6X-7RU"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.090185560286045074" green="0.090201966464519501" blue="0.090179957449436188" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="rXN-hs-PwG" firstAttribute="top" secondItem="VV8-Fl-kmO" secondAttribute="bottom" constant="40" id="0R6-WH-RZ7"/>
+                                            <constraint firstItem="rXN-hs-PwG" firstAttribute="top" secondItem="VV8-Fl-kmO" secondAttribute="bottom" constant="78" id="0R6-WH-RZ7"/>
                                             <constraint firstItem="VV8-Fl-kmO" firstAttribute="top" secondItem="bdy-aj-8ut" secondAttribute="bottom" constant="8" symbolic="YES" id="2m5-hL-nEd"/>
                                             <constraint firstItem="YiJ-Ti-8wP" firstAttribute="top" secondItem="LRd-q0-YW7" secondAttribute="top" constant="28" id="4uT-eG-zmB"/>
                                             <constraint firstItem="0wP-1y-KFU" firstAttribute="top" secondItem="LRd-q0-YW7" secondAttribute="top" constant="732" id="4ux-0q-H3G"/>
@@ -616,7 +616,7 @@
                                             <constraint firstAttribute="trailing" secondItem="qpr-Jc-eWP" secondAttribute="trailing" constant="34" id="7oF-xC-Rqi"/>
                                             <constraint firstItem="bdy-aj-8ut" firstAttribute="leading" secondItem="eO6-GC-unv" secondAttribute="leading" id="8Cn-hX-mbB"/>
                                             <constraint firstItem="5Zn-xM-IWc" firstAttribute="trailing" secondItem="WeX-Vi-foY" secondAttribute="trailing" id="8Ev-B7-zjr"/>
-                                            <constraint firstAttribute="bottom" secondItem="qbW-tF-MmC" secondAttribute="bottom" constant="1041" id="8JB-up-kVo"/>
+                                            <constraint firstAttribute="bottom" secondItem="qbW-tF-MmC" secondAttribute="bottom" constant="1079.3333333333333" id="8JB-up-kVo"/>
                                             <constraint firstItem="qpr-Jc-eWP" firstAttribute="top" secondItem="TQF-oX-OQS" secondAttribute="bottom" constant="8" symbolic="YES" id="8tf-Pa-JX6"/>
                                             <constraint firstItem="eO6-GC-unv" firstAttribute="leading" secondItem="LRd-q0-YW7" secondAttribute="leading" constant="34" id="9qa-pj-QEs"/>
                                             <constraint firstItem="bdy-aj-8ut" firstAttribute="leading" secondItem="VV8-Fl-kmO" secondAttribute="leading" id="BiS-NS-Zqr"/>
@@ -624,21 +624,20 @@
                                             <constraint firstItem="5Zn-xM-IWc" firstAttribute="top" secondItem="qpr-Jc-eWP" secondAttribute="bottom" constant="15" id="EQJ-ZP-5k7"/>
                                             <constraint firstItem="5Zn-xM-IWc" firstAttribute="leading" secondItem="WeX-Vi-foY" secondAttribute="leading" id="EY5-BU-Fwk"/>
                                             <constraint firstItem="qpr-Jc-eWP" firstAttribute="leading" secondItem="LRd-q0-YW7" secondAttribute="leading" constant="34" id="FDa-R2-P1D"/>
-                                            <constraint firstAttribute="bottom" secondItem="qpr-Jc-eWP" secondAttribute="bottom" constant="790" id="GXa-Ej-nvf"/>
+                                            <constraint firstAttribute="bottom" secondItem="qpr-Jc-eWP" secondAttribute="bottom" constant="828.33333333333337" id="GXa-Ej-nvf"/>
                                             <constraint firstItem="qbW-tF-MmC" firstAttribute="top" secondItem="YiJ-Ti-8wP" secondAttribute="bottom" constant="8" symbolic="YES" id="HGh-v8-LVe"/>
                                             <constraint firstItem="mi1-Aq-0qv" firstAttribute="top" secondItem="f36-Xp-Mra" secondAttribute="bottom" constant="8" symbolic="YES" id="Ikl-uX-dd3"/>
-                                            <constraint firstAttribute="bottom" secondItem="rXN-hs-PwG" secondAttribute="bottom" id="JIr-uE-gdS"/>
-                                            <constraint firstAttribute="height" constant="1136" id="KlA-d3-mPe"/>
+                                            <constraint firstAttribute="bottom" secondItem="rXN-hs-PwG" secondAttribute="bottom" constant="0.33333333333325754" id="JIr-uE-gdS"/>
                                             <constraint firstItem="TQF-oX-OQS" firstAttribute="trailing" secondItem="qbW-tF-MmC" secondAttribute="trailing" id="LWc-ts-daH"/>
                                             <constraint firstItem="bdy-aj-8ut" firstAttribute="trailing" secondItem="eO6-GC-unv" secondAttribute="trailing" id="Mvv-f8-81l"/>
-                                            <constraint firstAttribute="bottom" secondItem="mi1-Aq-0qv" secondAttribute="bottom" constant="412" id="NzP-K3-1NZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="mi1-Aq-0qv" secondAttribute="bottom" constant="450.33333333333337" id="NzP-K3-1NZ"/>
                                             <constraint firstItem="qbW-tF-MmC" firstAttribute="top" secondItem="LRd-q0-YW7" secondAttribute="top" constant="65" id="OLR-Fi-neK"/>
-                                            <constraint firstItem="rXN-hs-PwG" firstAttribute="top" secondItem="LRd-q0-YW7" secondAttribute="top" constant="1032" id="OOH-gV-88l"/>
-                                            <constraint firstAttribute="bottom" secondItem="eO6-GC-unv" secondAttribute="bottom" constant="319" id="OOy-Zn-BPx"/>
+                                            <constraint firstItem="rXN-hs-PwG" firstAttribute="top" secondItem="LRd-q0-YW7" secondAttribute="top" constant="1070" id="OOH-gV-88l"/>
+                                            <constraint firstAttribute="bottom" secondItem="eO6-GC-unv" secondAttribute="bottom" constant="357.33333333333337" id="OOy-Zn-BPx"/>
                                             <constraint firstAttribute="trailing" secondItem="mi1-Aq-0qv" secondAttribute="trailing" constant="34" id="OQY-c8-rD8"/>
                                             <constraint firstItem="YiJ-Ti-8wP" firstAttribute="leading" secondItem="qbW-tF-MmC" secondAttribute="leading" id="Q1r-ha-N6l"/>
                                             <constraint firstItem="WeX-Vi-foY" firstAttribute="top" secondItem="5Zn-xM-IWc" secondAttribute="bottom" constant="8" symbolic="YES" id="QJk-Wu-C3o"/>
-                                            <constraint firstAttribute="bottom" secondItem="0wP-1y-KFU" secondAttribute="bottom" constant="374" id="QLI-F9-Dco"/>
+                                            <constraint firstAttribute="bottom" secondItem="0wP-1y-KFU" secondAttribute="bottom" constant="412.33333333333337" id="QLI-F9-Dco"/>
                                             <constraint firstItem="eO6-GC-unv" firstAttribute="top" secondItem="LRd-q0-YW7" secondAttribute="top" constant="770" id="Qkk-Rg-8NO"/>
                                             <constraint firstAttribute="trailing" secondItem="eO6-GC-unv" secondAttribute="trailing" constant="34" id="R2b-lj-XcX"/>
                                             <constraint firstItem="bdy-aj-8ut" firstAttribute="trailing" secondItem="VV8-Fl-kmO" secondAttribute="trailing" id="Tdk-Xp-ppH"/>
@@ -655,7 +654,7 @@
                                             <constraint firstItem="qbW-tF-MmC" firstAttribute="leading" secondItem="LRd-q0-YW7" secondAttribute="leading" constant="34" id="gPh-lT-NaM"/>
                                             <constraint firstAttribute="trailing" secondItem="rXN-hs-PwG" secondAttribute="trailing" id="h1K-pW-FEp"/>
                                             <constraint firstItem="WeX-Vi-foY" firstAttribute="top" secondItem="LRd-q0-YW7" secondAttribute="top" constant="398" id="lWt-cH-fcn"/>
-                                            <constraint firstAttribute="bottom" secondItem="WeX-Vi-foY" secondAttribute="bottom" constant="546" id="m4y-Sg-r7g"/>
+                                            <constraint firstAttribute="bottom" secondItem="WeX-Vi-foY" secondAttribute="bottom" constant="584.33333333333337" id="m4y-Sg-r7g"/>
                                             <constraint firstItem="bdy-aj-8ut" firstAttribute="top" secondItem="eO6-GC-unv" secondAttribute="bottom" constant="23" id="qDX-b1-It1"/>
                                             <constraint firstItem="mi1-Aq-0qv" firstAttribute="leading" secondItem="LRd-q0-YW7" secondAttribute="leading" constant="34" id="s0L-yB-Kyd"/>
                                             <constraint firstAttribute="trailing" secondItem="qbW-tF-MmC" secondAttribute="trailing" constant="34" id="wfw-eT-iEC"/>
@@ -665,11 +664,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.090185560289999994" green="0.090201966460000005" blue="0.090179957450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="LRd-q0-YW7" secondAttribute="bottom" constant="19" id="5eg-2n-KTY"/>
                                     <constraint firstItem="LRd-q0-YW7" firstAttribute="top" secondItem="4wC-5E-tba" secondAttribute="top" id="SGs-d4-8lv"/>
                                     <constraint firstAttribute="trailing" secondItem="LRd-q0-YW7" secondAttribute="trailing" id="brv-2I-pbf"/>
                                     <constraint firstItem="LRd-q0-YW7" firstAttribute="leading" secondItem="4wC-5E-tba" secondAttribute="leading" id="f12-bq-Pgf"/>
                                     <constraint firstItem="LRd-q0-YW7" firstAttribute="centerX" secondItem="4wC-5E-tba" secondAttribute="centerX" id="pXB-KW-JwO"/>
+                                    <constraint firstAttribute="bottom" secondItem="LRd-q0-YW7" secondAttribute="bottom" id="rSW-sO-MAD"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -704,7 +703,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2059" y="-246"/>
+            <point key="canvasLocation" x="2058.695652173913" y="-246.19565217391306"/>
         </scene>
     </scenes>
     <resources>
@@ -716,7 +715,7 @@
         <image name="gear" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nIC-WX-Cj2"/>
-        <segue reference="ih6-6X-7RU"/>
+        <segue reference="aed-Bq-g0R"/>
+        <segue reference="yRh-45-G2z"/>
     </inferredMetricsTieBreakers>
 </document>
