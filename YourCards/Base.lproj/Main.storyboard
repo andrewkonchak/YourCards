@@ -24,8 +24,8 @@
             <string>KohinoorDevanagari-Regular</string>
             <string>KohinoorDevanagari-Semibold</string>
         </array>
-        <array key="KohinoorBangla.ttc">
-            <string>KohinoorBangla-Light</string>
+        <array key="Noteworthy.ttc">
+            <string>Noteworthy-Light</string>
         </array>
         <array key="PingFang.ttc">
             <string>PingFangTC-Semibold</string>
@@ -41,36 +41,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7C-fu-DvT">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="579"/>
                             </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flg-Dj-J4g">
-                                <rect key="frame" x="168" y="627" width="78" height="60"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="49"/>
-                                <color key="textColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="642" width="414" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="31"/>
+                                <color key="textColor" red="0.22752603888511658" green="0.67915946245193481" blue="0.54944974184036255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Flg-Dj-J4g" firstAttribute="leading" secondItem="CvD-nW-qlT" secondAttribute="leadingMargin" constant="148" id="5RL-pU-BAC"/>
-                            <constraint firstItem="Flg-Dj-J4g" firstAttribute="top" secondItem="CvD-nW-qlT" secondAttribute="topMargin" constant="563" id="D0A-RO-vLV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Flg-Dj-J4g" secondAttribute="trailing" constant="148" id="NtE-9X-Kww"/>
+                            <constraint firstItem="Flg-Dj-J4g" firstAttribute="leading" secondItem="CvD-nW-qlT" secondAttribute="leadingMargin" constant="-20" id="5RL-pU-BAC"/>
+                            <constraint firstItem="Flg-Dj-J4g" firstAttribute="top" secondItem="CvD-nW-qlT" secondAttribute="topMargin" constant="578" id="D0A-RO-vLV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Flg-Dj-J4g" secondAttribute="trailing" constant="-20" id="NtE-9X-Kww"/>
                             <constraint firstAttribute="trailing" secondItem="m7C-fu-DvT" secondAttribute="trailing" id="egM-mt-Xoh"/>
                             <constraint firstItem="m7C-fu-DvT" firstAttribute="leading" secondItem="CvD-nW-qlT" secondAttribute="leading" id="goU-SS-K1d"/>
                             <constraint firstItem="m7C-fu-DvT" firstAttribute="top" secondItem="CvD-nW-qlT" secondAttribute="top" constant="64" id="nrQ-J5-WWJ"/>
                             <constraint firstItem="Flg-Dj-J4g" firstAttribute="bottom" secondItem="CvD-nW-qlT" secondAttribute="bottomMargin" id="qpH-Ov-p0Y"/>
-                            <constraint firstAttribute="bottom" secondItem="m7C-fu-DvT" secondAttribute="bottom" constant="49" id="xfy-xB-Cg6"/>
+                            <constraint firstAttribute="bottom" secondItem="m7C-fu-DvT" secondAttribute="bottom" constant="93" id="xfy-xB-Cg6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A9T-bZ-eTZ"/>
                     </view>
                     <connections>
-                        <outlet property="counterLabel" destination="Flg-Dj-J4g" id="ZvP-Dn-Top"/>
-                        <outlet property="sceneView" destination="m7C-fu-DvT" id="FO6-a1-cqQ"/>
+                        <outlet property="counterLabel" destination="Flg-Dj-J4g" id="3GK-YB-LXe"/>
+                        <outlet property="sceneView" destination="m7C-fu-DvT" id="FCM-kz-EBw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gay-Mw-59r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2903" y="-435"/>
+            <point key="canvasLocation" x="2902.898550724638" y="-435.32608695652175"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YlJ-go-cS3">

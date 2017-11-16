@@ -13,6 +13,7 @@ class ARKitViewController: UIViewController {
 
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
+
     
     var counter:Int = 0 {
         didSet {
@@ -32,16 +33,42 @@ class ARKitViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       
+        // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
         
+        // Run the view's session
         sceneView.session.run(configuration)
-        
         addObject()
+    }
+    
+    // Remove ship when we touch it
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let location = touch.location(in: sceneView)
+            
+            let hitList = sceneView.hitTest(location, options: nil)
+            
+            if let hitObject = hitList.first {
+                let node = hitObject.node
+                
+    //            if node.name == "ARShip" {
+                    counter += 1
+                    node.removeFromParentNode()
+                    addObject()
+                }
+    //        }
+            
+        }
     }
     
     func addObject() {
         let ship = SpaceShip()
         ship.loadModal()
+        
+        // random ship position
         
         let xPos = randomPosition(lowerBound: -1.5, upperBound: 1.5)
         let yPos = randomPosition(lowerBound: -1.5, upperBound: 1.5)
@@ -54,26 +81,6 @@ class ARKitViewController: UIViewController {
     
     func randomPosition (lowerBound lower:Float, upperBound upper:Float) -> Float {
         return Float(arc4random()) / Float(UInt32.max) * (lower - upper) + upper
-    }
-    
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            let location = touch.location(in: sceneView)
-            
-            let hitList = sceneView.hitTest(location, options: nil)
-            
-            if let hitObject = hitList.first {
-                let node = hitObject.node
-                
-                if node.name == "ARShip" {
-                    counter += 1
-                    node.removeFromParentNode()
-                    addObject()
-                }
-            }
-            
-        }
     }
     
     
