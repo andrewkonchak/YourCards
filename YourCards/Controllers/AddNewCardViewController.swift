@@ -10,8 +10,6 @@ import UIKit
 import RSBarcodes_Swift
 import AVFoundation
 
-
-
 class AddNewCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UITextViewDelegate{
     
     @IBOutlet weak var cardBarCode: UIImageView!
@@ -20,45 +18,12 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var cardNameTextField: UITextField!
     @IBOutlet weak var cardNumberTextField: UITextField!
     @IBOutlet weak var cardDescriptionTextView: UITextView!
+    @IBOutlet weak var barcodeImageView: UIImageView!
     
-    var userCards = CardsManager()
+    var cardsManager = CardsManager()
     var editCard: Card?
     var addCard: Card?
     var TapOnImage : String?
-    
-    @IBOutlet weak var barcodeImageView: UIImageView!
-    
-    @IBAction func tapToCreateBarcode(_ sender: UIButton) {
-        barcodeImageView.image = RSUnifiedCodeGenerator.shared.generateCode(cardNumberTextField.text!, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue)
-        
-    }
-    
-    @IBAction func createCardButton(_ sender: UIButton) {
-        if editCard == nil {
-        if cardNameTextField?.text != "" && cardNumberTextField?.text != "" &&  cardFrontImage.image != nil &&  cardBackImage.image != nil {
-            let addUserCard = Card(context: userCards.context)
-            addUserCard.cardNumber = cardNumberTextField!.text!
-            addUserCard.cardName = cardNameTextField!.text!
-            addUserCard.cardDescription  = cardDescriptionTextView!.text!
-            addUserCard.cardDate = Date()
-            addUserCard.cardFrontImage = convertImageToBase64(image: (cardFrontImage?.image)!)
-            addUserCard.cardBackImage = convertImageToBase64(image: (cardBackImage?.image)!)
-            userCards.createNewCards(createCard: addUserCard)
-        } else {
-            let alertController = UIAlertController(title: "OOPS", message: "You need to give all the informations required to save this product", preferredStyle: .alert)
-            
-            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-        }
-        } else {
-            editCard?.cardName = cardNameTextField!.text!
-            editCard?.cardNumber = cardNumberTextField!.text!
-            editCard?.cardDescription = cardDescriptionTextView!.text!
-             editCard?.cardFrontImage = convertImageToBase64(image: (cardFrontImage?.image)!)
-             editCard?.cardBackImage = convertImageToBase64(image: (cardBackImage?.image)!)
-            
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,33 +31,87 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         self.cardBackImage?.isUserInteractionEnabled = true
         addCardRoundCorners()
         loadImage()
-        
-        //hide keyboard
+    
         self.cardNameTextField.delegate = self
         self.cardNumberTextField.delegate = self
         self.cardDescriptionTextView.delegate = self
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func tapToCreateBarcode(_ sender: UIButton) {
+        barcodeImageView.image = RSUnifiedCodeGenerator.shared.generateCode(cardNumberTextField.text!, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue)
+        
+    }
+    
+    @IBAction func createCardButton(_ sender: UIButton) {
+        guard let context = cardsManager.context else {
+            return
+        }
+        
+        if editCard == nil {
+            if cardNameTextField?.text != "" && cardNumberTextField?.text != "" &&  cardFrontImage.image != nil &&  cardBackImage.image != nil {
+                let addUserCard = Card(context: context)
+                addUserCard.cardNumber = cardNumberTextField?.text ?? ""
+                addUserCard.cardName = cardNameTextField?.text ?? ""
+                addUserCard.cardDescription  = cardDescriptionTextView?.text ?? ""
+                addUserCard.cardDate = Date()
+                if let image = cardFrontImage?.image {
+                    addUserCard.cardFrontImage = CardsManager.convertImageToBase64(image: image)
+                }
+                if let image = cardBackImage?.image {
+                    addUserCard.cardBackImage = CardsManager.convertImageToBase64(image: image)
+                }
+    
+                cardsManager.saveCard(card: addUserCard)
+            } else {
+                let alertController = UIAlertController(title: "OOPS", message: "You need to give all the informations required to save this product", preferredStyle: .alert)
+                
+                alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        } else {
+            editCard?.cardName = cardNameTextField?.text ?? ""
+            editCard?.cardNumber = cardNumberTextField?.text ?? ""
+            editCard?.cardDescription = cardDescriptionTextView?.text ?? ""
+            
+            if let image = cardFrontImage?.image {
+                editCard?.cardFrontImage = CardsManager.convertImageToBase64(image: image)
+            }
+            if let image = cardBackImage?.image {
+                editCard?.cardBackImage = CardsManager.convertImageToBase64(image: image)
+            }
+        }
+    }
+    
+    @IBAction func tapFrontImage(_ sender: UITapGestureRecognizer) {
+        TapOnImage = "frontImage"
+        pickerCardImage()
+    }
+    @IBAction func tapBackImage(_ sender: UITapGestureRecognizer) {
+        TapOnImage = "backImage"
+        pickerCardImage()
     }
     
     // Load Data from full view to add card
-    func loadImage(){
-        if editCard != nil {
-            cardNameTextField.text = editCard?.cardName
-            cardDescriptionTextView.text = editCard?.cardDescription
-            cardNumberTextField.text = editCard?.cardNumber
-            cardFrontImage.image = userCards.convertBase64ToImage(base64String: (editCard?.cardFrontImage)!)
-            cardBackImage.image = userCards.convertBase64ToImage(base64String: (editCard?.cardBackImage)!)
-            cardBarCode?.image = RSUnifiedCodeGenerator.shared.generateCode(cardNumberTextField.text!, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue)
+    func loadImage() {
+        guard editCard != nil else {
+            return
         }
         
+        cardNameTextField.text = editCard?.cardName
+        cardDescriptionTextView.text = editCard?.cardDescription
+        cardNumberTextField.text = editCard?.cardNumber
+        cardBarCode?.image = RSUnifiedCodeGenerator.shared.generateCode(cardNumberTextField.text!, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue)
+        
+        if let base64string = editCard?.cardFrontImage {
+            cardFrontImage.image = CardsManager.convertBase64ToImage(base64String: base64string)
+        }
+        if let base64string = editCard?.cardBackImage {
+            cardBackImage.image = CardsManager.convertBase64ToImage(base64String: base64string)
+        }
     }
-    
-    
-    
     
     // round corners and bordercolor
     func addCardRoundCorners(){
-        
         cardFrontImage.layer.cornerRadius = 12
         cardFrontImage.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
         cardFrontImage.layer.borderWidth = 2
@@ -116,7 +135,6 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         cardNumberTextField.layer.cornerRadius = 12
         cardNumberTextField.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
         cardNumberTextField.layer.borderWidth = 2
-        
     }
     
     // Press return to hide keyboard
@@ -128,17 +146,7 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         return true
     }
     
-    @IBAction func tapFrontImage(_ sender: UITapGestureRecognizer) {
-        TapOnImage = "frontImage"
-        pickerCardImage()
-    }
-    @IBAction func tapBackImage(_ sender: UITapGestureRecognizer) {
-         TapOnImage = "backImage"
-        pickerCardImage()
-    }
-    
     func pickerCardImage() {
-        
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.allowsEditing = true
@@ -169,54 +177,23 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         alertController.addAction(savedPhotosAction)
         alertController.addAction(cancelAction)
         
-        
         present(alertController, animated: true, completion: nil)
-        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         self.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
-            if TapOnImage == "frontImage"{
-                cardFrontImage.image = image
-            }else{
-                cardBackImage.image = image
-            }
+        if TapOnImage == "frontImage"{
+            cardFrontImage.image = image
+        }else{
+            cardBackImage.image = image
         }
+    }
     
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
         
     }
-    
-    // MARK: - Convert UIImage to base64String
-    
-    func convertImageToBase64(image: UIImage) -> String {
-        let imageData = UIImagePNGRepresentation(image)
-        let base64String = imageData?.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
-        
-        return base64String ?? ""
-        
-    }
-     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     
 }

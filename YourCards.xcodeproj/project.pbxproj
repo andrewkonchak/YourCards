@@ -11,7 +11,7 @@
 		491925C51FB07AD500E1184D /* CardCoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491925C31FB07AD500E1184D /* CardCoreDataClass.swift */; };
 		4919FA3D1FAF8CC300B4D8F8 /* AddNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */; };
 		49479C2D1FB9F9B900B5DA5E /* CardFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */; };
-		4952878A1FB9D17F0027122D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495287891FB9D17F0027122D /* Buttons.swift */; };
+		4952878A1FB9D17F0027122D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495287891FB9D17F0027122D /* RoundButton.swift */; };
 		4966402E1FBC4AEE004FDA39 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966402D1FBC4AEE004FDA39 /* SettingsTableViewController.swift */; };
 		496640401FBC937F004FDA39 /* ARKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966403F1FBC937F004FDA39 /* ARKitViewController.swift */; };
 		496640441FBC94AC004FDA39 /* SpaceShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496640431FBC94AC004FDA39 /* SpaceShip.swift */; };
@@ -57,7 +57,7 @@
 		491925C31FB07AD500E1184D /* CardCoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCoreDataClass.swift; sourceTree = "<group>"; };
 		4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardViewController.swift; sourceTree = "<group>"; };
 		49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFullViewController.swift; sourceTree = "<group>"; };
-		495287891FB9D17F0027122D /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		495287891FB9D17F0027122D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		4966402D1FBC4AEE004FDA39 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4966403F1FBC937F004FDA39 /* ARKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARKitViewController.swift; sourceTree = "<group>"; };
 		496640431FBC94AC004FDA39 /* SpaceShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceShip.swift; sourceTree = "<group>"; };
@@ -115,6 +115,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		482983F31FBE124100DEEFB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				498BA51B1FA87C1900253737 /* YourCards.xcdatamodeld */,
+				491925C31FB07AD500E1184D /* CardCoreDataClass.swift */,
+				498BA54D1FA8868500253737 /* CardsManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		482983F41FBE126300DEEFB4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				482983F51FBE128300DEEFB4 /* CustomCells */,
+				4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */,
+				49A695A61FB06F7200B63FC2 /* CardTableViewController.swift */,
+				4966402D1FBC4AEE004FDA39 /* SettingsTableViewController.swift */,
+				49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		482983F51FBE128300DEEFB4 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				49A695A41FB06B2200B63FC2 /* CardTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		482983F61FBE12B000DEEFB4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				498BA5201FA87C1900253737 /* LaunchScreen.storyboard */,
+				498BA5181FA87C1900253737 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		482983F71FBE12DB00DEEFB4 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				495287891FB9D17F0027122D /* RoundButton.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
 		496640411FBC93A3004FDA39 /* ARKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,20 +200,13 @@
 			isa = PBXGroup;
 			children = (
 				496640411FBC93A3004FDA39 /* ARKit */,
-				491925C31FB07AD500E1184D /* CardCoreDataClass.swift */,
-				498BA5141FA87C1900253737 /* AppDelegate.swift */,
-				498BA54D1FA8868500253737 /* CardsManager.swift */,
-				495287891FB9D17F0027122D /* Buttons.swift */,
-				4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */,
-				49A695A41FB06B2200B63FC2 /* CardTableViewCell.swift */,
-				498BA5181FA87C1900253737 /* Main.storyboard */,
-				4966402D1FBC4AEE004FDA39 /* SettingsTableViewController.swift */,
-				49A695A61FB06F7200B63FC2 /* CardTableViewController.swift */,
-				49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */,
+				482983F31FBE124100DEEFB4 /* Model */,
+				482983F71FBE12DB00DEEFB4 /* CustomUI */,
+				482983F41FBE126300DEEFB4 /* Controllers */,
+				482983F61FBE12B000DEEFB4 /* Storyboards */,
 				49719EF31FBB07F9003BFFD6 /* Assets.xcassets */,
-				498BA5201FA87C1900253737 /* LaunchScreen.storyboard */,
+				498BA5141FA87C1900253737 /* AppDelegate.swift */,
 				498BA5231FA87C1900253737 /* Info.plist */,
-				498BA51B1FA87C1900253737 /* YourCards.xcdatamodeld */,
 			);
 			path = YourCards;
 			sourceTree = "<group>";
@@ -513,7 +553,7 @@
 				496640401FBC937F004FDA39 /* ARKitViewController.swift in Sources */,
 				49A695A51FB06B2200B63FC2 /* CardTableViewCell.swift in Sources */,
 				498BA5151FA87C1900253737 /* AppDelegate.swift in Sources */,
-				4952878A1FB9D17F0027122D /* Buttons.swift in Sources */,
+				4952878A1FB9D17F0027122D /* RoundButton.swift in Sources */,
 				49479C2D1FB9F9B900B5DA5E /* CardFullViewController.swift in Sources */,
 				4919FA3D1FAF8CC300B4D8F8 /* AddNewCardViewController.swift in Sources */,
 				498BA54E1FA8868500253737 /* CardsManager.swift in Sources */,

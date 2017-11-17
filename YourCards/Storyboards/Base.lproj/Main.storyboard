@@ -40,7 +40,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7C-fu-DvT">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7C-fu-DvT">
                                 <rect key="frame" x="0.0" y="64" width="414" height="579"/>
                             </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flg-Dj-J4g">
@@ -73,21 +73,6 @@
             </objects>
             <point key="canvasLocation" x="2902.898550724638" y="-435.32608695652175"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="YlJ-go-cS3">
-            <objects>
-                <viewController id="F9n-vL-Pfz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0oH-He-lTU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <viewLayoutGuide key="safeArea" id="21i-Xk-Vjw"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bUJ-MI-Bgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-19" y="-1268"/>
-        </scene>
         <!--Card Full View Controller-->
         <scene sceneID="ZLU-6K-O2f">
             <objects>
@@ -112,7 +97,7 @@
                                                 <nil key="textColor"/>
                                                 <color key="highlightedColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jl1-Td-IlH">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jl1-Td-IlH">
                                                 <rect key="frame" x="36" y="44" width="343" height="174"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
@@ -137,7 +122,7 @@
                                                 <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVC-m9-L2s" customClass="MyButton" customModule="YourCards" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVC-m9-L2s" customClass="RoundButton" customModule="YourCards" customModuleProvider="target">
                                                 <rect key="frame" x="36" y="574" width="343" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.44175588989999998" blue="0.38950875099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
@@ -198,7 +183,7 @@
                                                 <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RCV-5D-G19">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RCV-5D-G19">
                                                 <rect key="frame" x="44" y="70" width="326" height="487"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
@@ -216,7 +201,7 @@
                                             <constraint firstAttribute="width" constant="414" id="gop-Z2-rhB"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VEH-pK-VLv">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VEH-pK-VLv">
                                         <rect key="frame" x="36" y="261" width="343" height="125"/>
                                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -280,13 +265,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="376" height="101.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xUQ-SA-2VI">
-                                            <rect key="frame" x="7" y="11" width="138" height="84"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="84" id="N0N-v7-fsN"/>
-                                                <constraint firstAttribute="width" constant="138" id="rmT-kt-O9s"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exz-EH-jJs">
                                             <rect key="frame" x="153" y="26" width="225" height="36"/>
                                             <constraints>
@@ -305,6 +283,13 @@
                                             <color key="textColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xUQ-SA-2VI">
+                                            <rect key="frame" x="7" y="11" width="138" height="84"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="84" id="N0N-v7-fsN"/>
+                                                <constraint firstAttribute="width" constant="138" id="rmT-kt-O9s"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="exz-EH-jJs" secondAttribute="trailing" constant="-2" id="2z2-iA-qUb"/>
@@ -344,7 +329,7 @@
                             <barButtonItem systemItem="add" id="hvX-L6-ojb">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="DVt-7R-ech" kind="show" identifier="cellId" id="aed-Bq-g0R"/>
+                                    <segue destination="DVt-7R-ech" kind="show" identifier="addNewCardSegue" id="aed-Bq-g0R"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="6273-200" id="pLt-96-NPL">
@@ -433,16 +418,16 @@
                                                     <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUP-VV-Oet">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="How-to-speed-up-App-Store-purchases-with-Touch-ID" translatesAutoresizingMaskIntoConstraints="NO" id="NEL-3c-pab">
+                                                    <rect key="frame" x="10" y="0.0" width="72" height="66"/>
+                                                    <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                </imageView>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xUP-VV-Oet">
                                                     <rect key="frame" x="345" y="18" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="switch:" destination="7gG-U3-JTz" eventType="valueChanged" id="9tF-Sy-wGJ"/>
                                                     </connections>
                                                 </switch>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="How-to-speed-up-App-Store-purchases-with-Touch-ID" translatesAutoresizingMaskIntoConstraints="NO" id="NEL-3c-pab">
-                                                    <rect key="frame" x="10" y="0.0" width="72" height="66"/>
-                                                    <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="GVR-2i-cXp" firstAttribute="centerY" secondItem="xUP-VV-Oet" secondAttribute="centerY" id="1RQ-Ng-kXP"/>
@@ -527,7 +512,7 @@
                                                 <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO6-GC-unv" customClass="MyButton" customModule="YourCards" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO6-GC-unv" customClass="RoundButton" customModule="YourCards" customModuleProvider="target">
                                                 <rect key="frame" x="34" y="770" width="307" height="52.666666666666629"/>
                                                 <color key="backgroundColor" red="0.22661063357520952" green="0.67997894704644457" blue="0.55074835723886273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="22"/>
@@ -562,7 +547,7 @@
                                                 <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WeX-Vi-foY">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WeX-Vi-foY">
                                                 <rect key="frame" x="34" y="398" width="307" height="197.66666666666663"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
@@ -582,7 +567,7 @@
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-Jc-eWP">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-Jc-eWP">
                                                 <rect key="frame" x="34" y="151" width="307" height="200.66666666666663"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
