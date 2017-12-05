@@ -3,7 +3,7 @@
 //  Calculator
 //
 //  Created by Andrew on 10/10/17.
-//  Copyright © 2017 Andrew. All rights reserved.
+//  Copyright © 2017 Andrew Konchak. All rights reserved.
 //
 
 import Foundation

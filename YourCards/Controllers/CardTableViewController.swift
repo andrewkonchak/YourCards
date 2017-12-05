@@ -119,11 +119,10 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
         
         let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
             self.cardManager.deleteCard(card: self.cardsArray[indexPath.row])
-            self.allCards.remove(at: indexPath.row)
+            self.cardsArray.remove(at: indexPath.row)
             tableView.reloadData()
         }
         deleteAction.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
-        
         return [editAction, shareAction, deleteAction]
     }
     

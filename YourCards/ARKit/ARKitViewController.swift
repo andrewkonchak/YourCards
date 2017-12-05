@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  ARKitGame
 //
-//  Created by Brian Advent on 22.06.17.
-//  Copyright © 2017 Brian Advent. All rights reserved.
+//  Created by Andrew Konchak on 22.06.17.
+//  Copyright © 2017 Andrew Konchak. All rights reserved.
 //
 
 import UIKit
