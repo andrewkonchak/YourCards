@@ -27,7 +27,6 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         cardTableView.delegate = self
         cardTableView.dataSource = self
         tableView.keyboardDismissMode = .onDrag
@@ -47,7 +46,8 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
-    // Custom search bar
+    // MARK: - Custom search bar
+    
     func createSearchBar(){
         let searchBar = UISearchBar()
         searchBar.placeholder = "Search your card here!"
@@ -107,7 +107,7 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
             self.performSegue(withIdentifier: "addNewCardSegue", sender: self.cardsArray[indexPath.row])
             
         }
-        editAction.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        editAction.backgroundColor = #colorLiteral(red: 0.2497821676, green: 0.7859748018, blue: 0.7195636982, alpha: 1)
         
         let shareAction = UITableViewRowAction(style: .normal, title: "Share") { (rowAction, indexPath) in
             let shareVC = UIActivityViewController(activityItems: [CardsManager.convertBase64ToImage(base64String: self.cardsArray[indexPath.row].cardBackImage!),self.cardsArray[indexPath.row].cardName!, self.cardsArray[indexPath.row].cardNumber!], applicationActivities: nil)
@@ -115,7 +115,7 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
             
         }
         
-        shareAction.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        shareAction.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         
         let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
             self.cardManager.deleteCard(card: self.cardsArray[indexPath.row])
@@ -134,6 +134,29 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
             let editUserCard = segue.destination as! CardFullViewController
             editUserCard.cardFromCell = sender as? Card
         }
+    }
+    
+     // MARK: - TableView animate
+    
+    func animateTable() {
+        tableView.reloadData()
+        let cells = tableView.visibleCells
+        
+        let tableViewHeigh = tableView.bounds.size.height
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeigh)
+        }
+        
+        var delayCounter = 0
+        for cell in cells {
+            UIView.animate(withDuration: 1.75, delay: Double(delayCounter) * 0.5, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform.identity
+            }, completion: nil)
+            delayCounter += 1
+        }
+        
+        
     }
     
     

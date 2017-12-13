@@ -19,6 +19,7 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var cardNumberTextField: UITextField!
     @IBOutlet weak var cardDescriptionTextView: UITextView!
     @IBOutlet weak var barcodeImageView: UIImageView!
+    @IBOutlet weak var barcodeButton: UIButtonX!
     
     var cardsManager = CardsManager()
     var editCard: Card?
@@ -31,6 +32,7 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         self.cardBackImage?.isUserInteractionEnabled = true
         addCardRoundCorners()
         loadImage()
+        addViewAnimation()
     
         self.cardNameTextField.delegate = self
         self.cardNumberTextField.delegate = self
@@ -39,7 +41,6 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     
     @IBAction func tapToCreateBarcode(_ sender: UIButton) {
         barcodeImageView.image = RSUnifiedCodeGenerator.shared.generateCode(cardNumberTextField.text!, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue)
-        
     }
     
     @IBAction func createCardButton(_ sender: UIButton) {
@@ -113,27 +114,27 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     // round corners and bordercolor
     func addCardRoundCorners(){
         cardFrontImage.layer.cornerRadius = 12
-        cardFrontImage.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardFrontImage.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardFrontImage.layer.borderWidth = 2
         
         cardBackImage.layer.cornerRadius = 12
-        cardBackImage.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardBackImage.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardBackImage.layer.borderWidth = 2
         
         barcodeImageView.layer.cornerRadius = 12
-        barcodeImageView.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        barcodeImageView.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         barcodeImageView.layer.borderWidth = 2
         
         cardDescriptionTextView.layer.cornerRadius = 12
-        cardDescriptionTextView.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardDescriptionTextView.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardDescriptionTextView.layer.borderWidth = 2
         
         cardNameTextField.layer.cornerRadius = 12
-        cardNameTextField.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardNameTextField.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardNameTextField.layer.borderWidth = 2
         
         cardNumberTextField.layer.cornerRadius = 12
-        cardNumberTextField.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardNumberTextField.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardNumberTextField.layer.borderWidth = 2
     }
     
@@ -193,6 +194,57 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func addViewAnimation(){
+        cardBarCode.center.x = self.view.frame.width + 30
+        
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+            self.cardBarCode.center.x = self.view.frame.width / 2
+        }, completion: nil)
+        
+        cardNameTextField.center.x = self.view.frame.width + 30
+        
+        UIView.animate(withDuration: 1.0, delay: 0.1, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+            self.cardNameTextField.center.x = self.view.frame.width / 2
+        }, completion: nil)
+        
+        cardFrontImage.center.x = self.view.frame.width + 30
+        
+        UIView.animate(withDuration: 1.0, delay: 0.2, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+            self.cardFrontImage.center.x = self.view.frame.width / 2
+        }, completion: nil)
+        
+        cardBackImage.center.x = self.view.frame.width + 30
+        
+        UIView.animate(withDuration: 1.0, delay: 0.3, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+            self.cardBackImage.center.x = self.view.frame.width / 2
+        }, completion: nil)
+        
+        barcodeImageView.center.x = self.view.frame.width + 30
+        
+        UIView.animate(withDuration: 1.0, delay: 0.4, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+            self.barcodeImageView.center.x = self.view.frame.width / 2
+        }, completion: nil)
+        
+        cardNumberTextField.center.x = self.view.frame.width + 30
+        
+        UIView.animate(withDuration: 1.0, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+            self.cardNumberTextField.center.x = self.view.frame.width / 2
+        }, completion: nil)
+        
+        barcodeButton.center.x = self.view.frame.width + 30
+        
+        UIView.animate(withDuration: 1.0, delay: 0.6, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+            self.barcodeButton.center.x = self.view.frame.width / 2
+        }, completion: nil)
+        
+        cardDescriptionTextView.center.x = self.view.frame.width + 30
+        
+        UIView.animate(withDuration: 1.0, delay: 0.7, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+            self.cardDescriptionTextView.center.x = self.view.frame.width / 2
+        }, completion: nil)
         
     }
     

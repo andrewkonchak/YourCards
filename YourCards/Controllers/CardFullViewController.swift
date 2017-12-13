@@ -35,23 +35,23 @@ class CardFullViewController: UIViewController,UIScrollViewDelegate {
     
     func roundedCardsWithColor(){
         cardBackImageFullView.layer.cornerRadius = 15
-        cardBackImageFullView.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardBackImageFullView.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardBackImageFullView.layer.borderWidth = 2
         
         cardFrontFullView.layer.cornerRadius = 15
-        cardFrontFullView.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardFrontFullView.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardFrontFullView.layer.borderWidth = 2
         
         cardBarcodeFullView.layer.cornerRadius = 15
-        cardBarcodeFullView.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardBarcodeFullView.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardBarcodeFullView.layer.borderWidth = 2
         
         cardNumberFullLabel.layer.cornerRadius = 15
-        cardNumberFullLabel.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardNumberFullLabel.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardNumberFullLabel.layer.borderWidth = 2
         
         cardDescriptionFullView.layer.cornerRadius = 15
-        cardDescriptionFullView.layer.borderColor = #colorLiteral(red: 0.2275260389, green: 0.6791594625, blue: 0.5494497418, alpha: 1)
+        cardDescriptionFullView.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardDescriptionFullView.layer.borderWidth = 2
     }
     
