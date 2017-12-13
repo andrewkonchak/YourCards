@@ -115,14 +115,14 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
             
         }
         
-        shareAction.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        shareAction.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         
         let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
             self.cardManager.deleteCard(card: self.cardsArray[indexPath.row])
             self.cardsArray.remove(at: indexPath.row)
             tableView.reloadData()
         }
-        deleteAction.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        deleteAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         return [editAction, shareAction, deleteAction]
     }
     

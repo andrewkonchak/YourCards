@@ -2,8 +2,8 @@
 //  DesignableButton.swift
 //  SkyApp
 //
-//  Created by Mark Moeykens on 12/18/16.
-//  Copyright © 2016 Mark Moeykens. All rights reserved.
+//  Created by Andrew Konchak on 22.06.17.
+//  Copyright © 2017 Andrew Konchak. All rights reserved.
 //
 
 import UIKit

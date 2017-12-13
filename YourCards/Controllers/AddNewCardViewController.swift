@@ -200,49 +200,49 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     func addViewAnimation(){
         cardBarCode.center.x = self.view.frame.width + 30
         
-        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 2.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
             self.cardBarCode.center.x = self.view.frame.width / 2
         }, completion: nil)
         
         cardNameTextField.center.x = self.view.frame.width + 30
         
-        UIView.animate(withDuration: 1.0, delay: 0.1, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.1, usingSpringWithDamping: 2.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
             self.cardNameTextField.center.x = self.view.frame.width / 2
         }, completion: nil)
         
         cardFrontImage.center.x = self.view.frame.width + 30
         
-        UIView.animate(withDuration: 1.0, delay: 0.2, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.2, usingSpringWithDamping: 2.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
             self.cardFrontImage.center.x = self.view.frame.width / 2
         }, completion: nil)
         
         cardBackImage.center.x = self.view.frame.width + 30
         
-        UIView.animate(withDuration: 1.0, delay: 0.3, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.3, usingSpringWithDamping: 2.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
             self.cardBackImage.center.x = self.view.frame.width / 2
         }, completion: nil)
         
         barcodeImageView.center.x = self.view.frame.width + 30
         
-        UIView.animate(withDuration: 1.0, delay: 0.4, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.4, usingSpringWithDamping: 2.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
             self.barcodeImageView.center.x = self.view.frame.width / 2
         }, completion: nil)
         
         cardNumberTextField.center.x = self.view.frame.width + 30
         
-        UIView.animate(withDuration: 1.0, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.5, usingSpringWithDamping: 2.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
             self.cardNumberTextField.center.x = self.view.frame.width / 2
         }, completion: nil)
         
         barcodeButton.center.x = self.view.frame.width + 30
         
-        UIView.animate(withDuration: 1.0, delay: 0.6, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.6, usingSpringWithDamping: 2.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
             self.barcodeButton.center.x = self.view.frame.width / 2
         }, completion: nil)
         
         cardDescriptionTextView.center.x = self.view.frame.width + 30
         
-        UIView.animate(withDuration: 1.0, delay: 0.7, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.7, usingSpringWithDamping: 2.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
             self.cardDescriptionTextView.center.x = self.view.frame.width / 2
         }, completion: nil)
         
