@@ -46,7 +46,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="579"/>
                             </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flg-Dj-J4g">
-                                <rect key="frame" x="0.0" y="598" width="414" height="138"/>
+                                <rect key="frame" x="0.0" y="642" width="414" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="31"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,11 +85,11 @@
             </objects>
             <point key="canvasLocation" x="2902.898550724638" y="-435.32608695652175"/>
         </scene>
-        <!--Card Full View Controller-->
+        <!--3dTouchView-->
         <scene sceneID="ZLU-6K-O2f">
             <objects>
-                <viewController id="8fC-R5-Os8" customClass="CardFullViewController" customModule="YourCards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="O9X-YH-sCS">
+                <viewController title="3dTouchView" id="8fC-R5-Os8" customClass="CardFullViewController" customModule="YourCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="view" id="O9X-YH-sCS">
                         <rect key="frame" x="0.0" y="0.0" width="828" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -362,10 +362,10 @@
             </objects>
             <point key="canvasLocation" x="1213" y="-435"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Animated Tab Bar Controller-->
         <scene sceneID="vkR-Ta-IlK">
             <objects>
-                <tabBarController id="u8E-5F-AhR" sceneMemberID="viewController">
+                <tabBarController id="u8E-5F-AhR" customClass="AnimatedTabBarController" customModule="YourCards" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eAh-3W-ykX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -386,7 +386,7 @@
         <scene sceneID="GAv-Cw-JzX">
             <objects>
                 <navigationController id="tgN-50-QFV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cards" image="credit-card-2" id="2p7-rT-RPQ"/>
+                    <tabBarItem key="tabBarItem" title="Cards" image="first" id="2p7-rT-RPQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="5699043-designer-wallpaper" id="gdL-ZE-zGZ">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -415,7 +415,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
-                            <tableViewSection id="vBU-Fb-ldx">
+                            <tableViewSection id="z0G-3m-UnV">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" rowHeight="66" id="kxz-a2-gSI">
                                         <rect key="frame" x="0.0" y="35" width="414" height="66"/>
@@ -430,33 +430,39 @@
                                                     <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="How-to-speed-up-App-Store-purchases-with-Touch-ID" translatesAutoresizingMaskIntoConstraints="NO" id="NEL-3c-pab">
-                                                    <rect key="frame" x="10" y="0.0" width="72" height="66"/>
-                                                    <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
-                                                </imageView>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xUP-VV-Oet">
-                                                    <rect key="frame" x="345" y="18" width="51" height="31"/>
-                                                    <color key="onTintColor" red="0.1937988698" green="0.58306348320000001" blue="0.5224967599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6l-GR-67W">
+                                                    <rect key="frame" x="347" y="18" width="51" height="31"/>
+                                                    <color key="onTintColor" red="0.1960784314" green="0.58431372550000005" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="thumbTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
-                                                        <action selector="switch:" destination="7gG-U3-JTz" eventType="valueChanged" id="9tF-Sy-wGJ"/>
+                                                        <action selector="switch:" destination="7gG-U3-JTz" eventType="valueChanged" id="kS3-Y5-FbP"/>
                                                     </connections>
                                                 </switch>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="How-to-speed-up-App-Store-purchases-with-Touch-ID" translatesAutoresizingMaskIntoConstraints="NO" id="HdM-7j-tMP">
+                                                    <rect key="frame" x="22" y="3" width="60" height="60"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="GVR-2i-cXp" firstAttribute="centerY" secondItem="xUP-VV-Oet" secondAttribute="centerY" id="1RQ-Ng-kXP"/>
-                                                <constraint firstItem="NEL-3c-pab" firstAttribute="top" secondItem="21L-cK-Nsy" secondAttribute="top" id="8n9-lQ-fMO"/>
-                                                <constraint firstItem="GVR-2i-cXp" firstAttribute="bottom" secondItem="21L-cK-Nsy" secondAttribute="bottomMargin" id="8rE-mG-CfF"/>
-                                                <constraint firstItem="GVR-2i-cXp" firstAttribute="top" secondItem="21L-cK-Nsy" secondAttribute="topMargin" id="B6b-3e-8Ks"/>
-                                                <constraint firstItem="GVR-2i-cXp" firstAttribute="leading" secondItem="NEL-3c-pab" secondAttribute="trailing" constant="8" symbolic="YES" id="KJ2-gK-Ijt"/>
-                                                <constraint firstItem="NEL-3c-pab" firstAttribute="leading" secondItem="21L-cK-Nsy" secondAttribute="leadingMargin" constant="-10" id="Ln6-2c-6vc"/>
-                                                <constraint firstItem="xUP-VV-Oet" firstAttribute="leading" secondItem="GVR-2i-cXp" secondAttribute="trailing" constant="160" id="khq-Eh-5sX"/>
-                                                <constraint firstItem="NEL-3c-pab" firstAttribute="centerY" secondItem="GVR-2i-cXp" secondAttribute="centerY" id="qzk-hp-auf"/>
-                                                <constraint firstItem="GVR-2i-cXp" firstAttribute="leading" secondItem="21L-cK-Nsy" secondAttribute="leading" constant="90" id="xtZ-1l-c0d"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GVR-2i-cXp" secondAttribute="trailing" constant="20" symbolic="YES" id="8cw-1h-Rb1"/>
+                                                <constraint firstItem="GVR-2i-cXp" firstAttribute="bottom" secondItem="21L-cK-Nsy" secondAttribute="bottomMargin" id="DIH-BP-DoH"/>
+                                                <constraint firstItem="HdM-7j-tMP" firstAttribute="centerY" secondItem="GVR-2i-cXp" secondAttribute="centerY" id="Fgt-4O-0hl"/>
+                                                <constraint firstItem="GVR-2i-cXp" firstAttribute="leading" secondItem="21L-cK-Nsy" secondAttribute="leading" constant="90" id="Nmq-hq-Dec"/>
+                                                <constraint firstItem="GVR-2i-cXp" firstAttribute="centerY" secondItem="E6l-GR-67W" secondAttribute="centerY" id="ZkT-zE-ubs"/>
+                                                <constraint firstItem="GVR-2i-cXp" firstAttribute="top" secondItem="21L-cK-Nsy" secondAttribute="topMargin" id="a74-3i-a7S"/>
+                                                <constraint firstItem="E6l-GR-67W" firstAttribute="top" secondItem="21L-cK-Nsy" secondAttribute="topMargin" constant="7" id="cEk-Ox-Y3U"/>
+                                                <constraint firstItem="HdM-7j-tMP" firstAttribute="leading" secondItem="21L-cK-Nsy" secondAttribute="leadingMargin" constant="2" id="j2G-yh-xol"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="E6l-GR-67W" secondAttribute="trailing" constant="-2" id="svi-wf-ixQ"/>
+                                                <constraint firstItem="HdM-7j-tMP" firstAttribute="top" secondItem="21L-cK-Nsy" secondAttribute="topMargin" constant="-8" id="yWj-Xk-q97"/>
+                                                <constraint firstItem="GVR-2i-cXp" firstAttribute="leading" secondItem="HdM-7j-tMP" secondAttribute="trailing" constant="8" id="zXr-XV-GP1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.16108125449999999" green="0.17886459830000001" blue="0.20529165860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
+                            </tableViewSection>
+                            <tableViewSection id="dKo-t4-kvh">
+                                <cells/>
                             </tableViewSection>
                         </sections>
                         <connections>
@@ -466,7 +472,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="5oh-mZ-SEs"/>
                     <connections>
-                        <outlet property="touchIdImage" destination="NEL-3c-pab" id="pwP-1h-vAd"/>
+                        <outlet property="touchIdImage" destination="HdM-7j-tMP" id="vTa-kZ-GgP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWT-aj-vgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -477,7 +483,7 @@
         <scene sceneID="DPL-fg-l9V">
             <objects>
                 <navigationController id="Psw-BS-bfe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="YqI-SQ-9Pc"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Settings" image="second" id="YqI-SQ-9Pc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bam-AO-Pcz">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -503,7 +509,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wC-5E-tba">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1180"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1087"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRd-q0-YW7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1176"/>
@@ -740,13 +746,13 @@
         <image name="5699043-designer-wallpaper" width="720" height="450"/>
         <image name="6273-200" width="21" height="21"/>
         <image name="How-to-speed-up-App-Store-purchases-with-Touch-ID" width="150" height="100"/>
-        <image name="credit-card-2" width="21" height="21"/>
-        <image name="gear" width="21" height="21"/>
+        <image name="first" width="21" height="21"/>
         <image name="photo" width="333" height="166"/>
         <image name="photoalbum" width="42" height="42"/>
+        <image name="second" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nIC-WX-Cj2"/>
-        <segue reference="ih6-6X-7RU"/>
+        <segue reference="yRh-45-G2z"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    
     func applicationDidFinishLaunching(_ application: UIApplication) {
         UITabBar.appearance().tintColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         UINavigationBar.appearance().tintColor = .white

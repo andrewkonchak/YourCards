@@ -30,6 +30,7 @@
 		498BA54E1FA8868500253737 /* CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BA54D1FA8868500253737 /* CardsManager.swift */; };
 		49A695A51FB06B2200B63FC2 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A695A41FB06B2200B63FC2 /* CardTableViewCell.swift */; };
 		49A695A71FB06F7200B63FC2 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A695A61FB06F7200B63FC2 /* CardTableViewController.swift */; };
+		49AAD09C1FE2C60F00C38491 /* AnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AAD09B1FE2C60F00C38491 /* AnimatedTabBarController.swift */; };
 		4F35996F212DC1E1E14DD300 /* Pods_YourCardsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D50EF846595B5D640ACBB6 /* Pods_YourCardsUITests.framework */; };
 		A5062034869405375427A6C3 /* Pods_YourCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3520D83DCE9F6419BBEECDCC /* Pods_YourCards.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		498BA54D1FA8868500253737 /* CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsManager.swift; sourceTree = "<group>"; };
 		49A695A41FB06B2200B63FC2 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		49A695A61FB06F7200B63FC2 /* CardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewController.swift; sourceTree = "<group>"; };
+		49AAD09B1FE2C60F00C38491 /* AnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTabBarController.swift; sourceTree = "<group>"; };
 		52818D7D932E1F08062A74F5 /* Pods_YourCardsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourCardsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B035AA9B34FAA500408ADCD4 /* Pods-YourCardsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourCardsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourCardsUITests/Pods-YourCardsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D57E03F6A4C9876D3701A5A3 /* Pods-YourCardsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourCardsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YourCardsTests/Pods-YourCardsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				49010C361FE148AA00769C2F /* UIButtonX.swift */,
 				49010C3A1FE1683D00769C2F /* UIViewX.swift */,
+				49AAD09B1FE2C60F00C38491 /* AnimatedTabBarController.swift */,
 			);
 			path = "Custom elements";
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				49010C371FE148AB00769C2F /* UIButtonX.swift in Sources */,
 				498BA51D1FA87C1900253737 /* YourCards.xcdatamodeld in Sources */,
 				49A695A71FB06F7200B63FC2 /* CardTableViewController.swift in Sources */,
+				49AAD09C1FE2C60F00C38491 /* AnimatedTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

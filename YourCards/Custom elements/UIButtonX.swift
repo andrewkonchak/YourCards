@@ -1,8 +1,8 @@
 //
-//  DesignableButton.swift
-//  SkyApp
+//  AddNewCardViewController.swift
+//  YourCards
 //
-//  Created by Andrew Konchak on 22.06.17.
+//  Created by Andrew on 11/5/17.
 //  Copyright © 2017 Andrew Konchak. All rights reserved.
 //
 

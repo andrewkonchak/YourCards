@@ -29,16 +29,11 @@ class ARKitViewController: UIViewController {
         let scene = SCNScene()
         
         // MARK: - Multithreading Asynchronal
-//        DispatchQueue.main.async {
-//            self.animateBackgroundColor()
-//        }
         
-        //        DispatchQueue.main.async {
-//            self.animateBackgroundColor()
-//        }
-        
-        DispatchQueue.global().async {
-            self.animateBackgroundColor()
+        DispatchQueue.global(qos: .background).async {
+            DispatchQueue.main.async {
+                self.animateBackgroundColor()
+            }
         }
        
         sceneView.scene = scene
@@ -73,7 +68,6 @@ class ARKitViewController: UIViewController {
                     counter += 1
                     node.removeFromParentNode()
                     addObject()
-                
                 }
             
     //        }
@@ -97,7 +91,6 @@ class ARKitViewController: UIViewController {
             self.gradientView.firstColor = self.colorArray[self.currentColorArrayIndex].color1
             self.gradientView.secondColor = self.colorArray[self.currentColorArrayIndex].color2
         }) { (success) in
-            
             self.animateBackgroundColor()
         }
     }

@@ -30,12 +30,13 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
         cardTableView.delegate = self
         cardTableView.dataSource = self
         tableView.keyboardDismissMode = .onDrag
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         retrieveCards()
-        
+        animateTable()
     }
     
     @IBAction func searchBarItem(_ sender: UIBarButtonItem) {
@@ -45,6 +46,7 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
             createSearchBar()
         }
     }
+    
     
     // MARK: - Custom search bar
     
@@ -150,13 +152,11 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
         
         var delayCounter = 0
         for cell in cells {
-            UIView.animate(withDuration: 1.75, delay: Double(delayCounter) * 0.5, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: Double(delayCounter) * 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 cell.transform = CGAffineTransform.identity
             }, completion: nil)
             delayCounter += 1
         }
-        
-        
     }
     
     
@@ -184,3 +184,7 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
 }
+
+
+
+
