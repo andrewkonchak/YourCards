@@ -79,7 +79,6 @@ class CardFullViewController: UIViewController,UIScrollViewDelegate {
         return nil
     }
         
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editCard"{
             let editUserCard = segue.destination as! AddNewCardViewController

@@ -26,7 +26,6 @@ class RoundButton: UIButton {
     func updateCornerRadius() {
         layer.cornerRadius = rounded ? frame.size.height / 3 : 1
     }
-    
 }
 
 

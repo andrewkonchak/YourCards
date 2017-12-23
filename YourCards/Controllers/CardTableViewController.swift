@@ -36,7 +36,13 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         retrieveCards()
-        animateTable()
+        
+        // MARK: - Animate CardTableView
+        if UserDefaults.standard.bool(forKey: "tableViewAnimate") == true {
+            animateTable()
+        }
+        
+        
     }
     
     @IBAction func searchBarItem(_ sender: UIBarButtonItem) {
@@ -47,6 +53,26 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
+    // MARK: - TableView animate
+    
+    func animateTable() {
+        tableView.reloadData()
+        let cells = tableView.visibleCells
+        
+        let tableViewHeigh = tableView.bounds.size.height
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeigh)
+        }
+        
+        var delayCounter = 0
+        for cell in cells {
+            UIView.animate(withDuration: 0.5, delay: Double(delayCounter) * 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform.identity
+            }, completion: nil)
+            delayCounter += 1
+        }
+    }
     
     // MARK: - Custom search bar
     
@@ -138,26 +164,6 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
-     // MARK: - TableView animate
-    
-    func animateTable() {
-        tableView.reloadData()
-        let cells = tableView.visibleCells
-        
-        let tableViewHeigh = tableView.bounds.size.height
-        
-        for cell in cells {
-            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeigh)
-        }
-        
-        var delayCounter = 0
-        for cell in cells {
-            UIView.animate(withDuration: 0.5, delay: Double(delayCounter) * 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                cell.transform = CGAffineTransform.identity
-            }, completion: nil)
-            delayCounter += 1
-        }
-    }
     
     
     func retrieveCards(){

@@ -19,12 +19,14 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var cardNumberTextField: UITextField!
     @IBOutlet weak var cardDescriptionTextView: UITextView!
     @IBOutlet weak var barcodeImageView: UIImageView!
-    @IBOutlet weak var barcodeButton: UIButtonX!
+    @IBOutlet weak var barcodeButton: UIButton!
+
     
     var cardsManager = CardsManager()
     var editCard: Card?
     var addCard: Card?
     var TapOnImage : String?
+    var button = RoundButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,14 +63,15 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
                 if let image = cardBackImage?.image {
                     addUserCard.cardBackImage = CardsManager.convertImageToBase64(image: image)
                 }
-    
                 cardsManager.saveCard(card: addUserCard)
+                
             } else {
-                let alertController = UIAlertController(title: "OOPS", message: "You need to give all the informations required to save this product", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "OOPS", message: "You need to give all the informations required to save new card", preferredStyle: .alert)
                 
                 alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
             }
+            
         } else {
             editCard?.cardName = cardNameTextField?.text ?? ""
             editCard?.cardNumber = cardNumberTextField?.text ?? ""
@@ -136,9 +139,12 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         cardNumberTextField.layer.cornerRadius = 12
         cardNumberTextField.layer.borderColor = #colorLiteral(red: 0.2013760805, green: 0.5983245969, blue: 0.5465805531, alpha: 1)
         cardNumberTextField.layer.borderWidth = 2
+        
+        barcodeButton.layer.cornerRadius = 15
+        
     }
     
-    // Press return to hide keyboard
+    // MARK: - Press "Return" to hide keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         cardNumberTextField.resignFirstResponder()
         cardNameTextField.resignFirstResponder()
@@ -248,8 +254,5 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         }, completion: nil)
         
     }
-    
-    
-    
-    
+
 }

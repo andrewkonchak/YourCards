@@ -13,7 +13,7 @@ class ARKitViewController: UIViewController {
 
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var gradientView: UIViewX!
+    @IBOutlet weak var gradientView: UIView!
     
     var currentColorArrayIndex = -1
     var colorArray: [(color1: UIColor, color2: UIColor)] = []
@@ -27,17 +27,7 @@ class ARKitViewController: UIViewController {
         super.viewDidLoad()
         
         let scene = SCNScene()
-        
-        // MARK: - Multithreading Asynchronal
-        
-        DispatchQueue.global(qos: .background).async {
-            DispatchQueue.main.async {
-                self.animateBackgroundColor()
-            }
-        }
-       
         sceneView.scene = scene
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,8 +78,8 @@ class ARKitViewController: UIViewController {
         currentColorArrayIndex = currentColorArrayIndex == (colorArray.count - 1) ? 0 : currentColorArrayIndex + 1
         
         UIView.transition(with: gradientView, duration: 2, options: [.transitionCrossDissolve], animations: {
-            self.gradientView.firstColor = self.colorArray[self.currentColorArrayIndex].color1
-            self.gradientView.secondColor = self.colorArray[self.currentColorArrayIndex].color2
+            self.gradientView.tintColor = self.colorArray[self.currentColorArrayIndex].color1
+            self.gradientView.tintColor = self.colorArray[self.currentColorArrayIndex].color2
         }) { (success) in
             self.animateBackgroundColor()
         }

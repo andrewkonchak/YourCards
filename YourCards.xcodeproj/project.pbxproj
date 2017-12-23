@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		33FFE945D90BFB098035D22C /* Pods_YourCardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52818D7D932E1F08062A74F5 /* Pods_YourCardsTests.framework */; };
-		49010C371FE148AB00769C2F /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49010C361FE148AA00769C2F /* UIButtonX.swift */; };
-		49010C3B1FE1683D00769C2F /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49010C3A1FE1683D00769C2F /* UIViewX.swift */; };
 		491925C51FB07AD500E1184D /* CardCoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491925C31FB07AD500E1184D /* CardCoreDataClass.swift */; };
 		4919FA3D1FAF8CC300B4D8F8 /* AddNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */; };
 		49479C2D1FB9F9B900B5DA5E /* CardFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */; };
@@ -57,8 +55,6 @@
 		1B7DA089733E06037C6CA0CD /* Pods-YourCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-YourCards/Pods-YourCards.release.xcconfig"; sourceTree = "<group>"; };
 		272F62118B9F8E7E60184F19 /* Pods-YourCardsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourCardsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourCardsTests/Pods-YourCardsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3520D83DCE9F6419BBEECDCC /* Pods_YourCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		49010C361FE148AA00769C2F /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
-		49010C3A1FE1683D00769C2F /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		491925C31FB07AD500E1184D /* CardCoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCoreDataClass.swift; sourceTree = "<group>"; };
 		4919FA3C1FAF8CC300B4D8F8 /* AddNewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardViewController.swift; sourceTree = "<group>"; };
 		49479C2C1FB9F9B900B5DA5E /* CardFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFullViewController.swift; sourceTree = "<group>"; };
@@ -171,8 +167,6 @@
 		49010C331FE147F000769C2F /* Custom elements */ = {
 			isa = PBXGroup;
 			children = (
-				49010C361FE148AA00769C2F /* UIButtonX.swift */,
-				49010C3A1FE1683D00769C2F /* UIViewX.swift */,
 				49AAD09B1FE2C60F00C38491 /* AnimatedTabBarController.swift */,
 			);
 			path = "Custom elements";
@@ -570,13 +564,11 @@
 				496640401FBC937F004FDA39 /* ARKitViewController.swift in Sources */,
 				49A695A51FB06B2200B63FC2 /* CardTableViewCell.swift in Sources */,
 				498BA5151FA87C1900253737 /* AppDelegate.swift in Sources */,
-				49010C3B1FE1683D00769C2F /* UIViewX.swift in Sources */,
 				4952878A1FB9D17F0027122D /* RoundButton.swift in Sources */,
 				49479C2D1FB9F9B900B5DA5E /* CardFullViewController.swift in Sources */,
 				4919FA3D1FAF8CC300B4D8F8 /* AddNewCardViewController.swift in Sources */,
 				498BA54E1FA8868500253737 /* CardsManager.swift in Sources */,
 				496640441FBC94AC004FDA39 /* SpaceShip.swift in Sources */,
-				49010C371FE148AB00769C2F /* UIButtonX.swift in Sources */,
 				498BA51D1FA87C1900253737 /* YourCards.xcdatamodeld in Sources */,
 				49A695A71FB06F7200B63FC2 /* CardTableViewController.swift in Sources */,
 				49AAD09C1FE2C60F00C38491 /* AnimatedTabBarController.swift in Sources */,
