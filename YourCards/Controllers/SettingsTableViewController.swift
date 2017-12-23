@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LocalAuthentication
+
 
 class SettingsTableViewController: UITableViewController {
     

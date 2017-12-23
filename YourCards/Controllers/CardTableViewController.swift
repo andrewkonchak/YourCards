@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import LocalAuthentication
 
 
 class CardTableViewController: UITableViewController, UISearchBarDelegate {
@@ -24,12 +25,19 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
     var allCards = [Card]()
     var cardsArray = [Card]()
     var shareCardImage: Card?
+    var touchID = TouchIDViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cardTableView.delegate = self
         cardTableView.dataSource = self
         tableView.keyboardDismissMode = .onDrag
+        
+        // MARK: - Touch ID
+        if UserDefaults.standard.bool(forKey: "touchID") == true {
+            touchID.authenticationWithTouchID()
+        }
+        
 
     }
     
@@ -73,6 +81,7 @@ class CardTableViewController: UITableViewController, UISearchBarDelegate {
             delayCounter += 1
         }
     }
+    
     
     // MARK: - Custom search bar
     

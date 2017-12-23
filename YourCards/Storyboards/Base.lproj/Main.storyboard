@@ -49,7 +49,7 @@
                                 <rect key="frame" x="0.0" y="598" width="414" height="138"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.1960784314" green="0.58431372550000005" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -84,6 +84,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gay-Mw-59r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2902.898550724638" y="-435.32608695652175"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xlt-fl-ME6">
+            <objects>
+                <viewController storyboardIdentifier="errorController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SAK-nF-9eJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QSm-S1-5eu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops! ☹︎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjA-Cy-UBt">
+                                <rect key="frame" x="20" y="75" width="374" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="oEn-Oy-fSf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" red="0.28895188891654622" green="0.32392912035858579" blue="0.36871772976751271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="robot-msg-error" translatesAutoresizingMaskIntoConstraints="NO" id="rwX-zW-yq3">
+                                <rect key="frame" x="20" y="185" width="374" height="426"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DjA-Cy-UBt" firstAttribute="trailing" secondItem="QSm-S1-5eu" secondAttribute="trailingMargin" id="2mN-7x-1wV"/>
+                            <constraint firstItem="rwX-zW-yq3" firstAttribute="top" secondItem="DjA-Cy-UBt" secondAttribute="bottom" constant="8" symbolic="YES" id="MAp-BP-Chm"/>
+                            <constraint firstItem="DjA-Cy-UBt" firstAttribute="leading" secondItem="QSm-S1-5eu" secondAttribute="leadingMargin" id="NUV-fz-klG"/>
+                            <constraint firstItem="DjA-Cy-UBt" firstAttribute="trailing" secondItem="rwX-zW-yq3" secondAttribute="trailing" id="P1i-qB-T9Y"/>
+                            <constraint firstItem="DjA-Cy-UBt" firstAttribute="leading" secondItem="rwX-zW-yq3" secondAttribute="leading" id="T75-eQ-U7s"/>
+                            <constraint firstItem="iqq-57-Jnx" firstAttribute="bottom" secondItem="rwX-zW-yq3" secondAttribute="bottom" constant="125" id="dRR-kC-J3i"/>
+                            <constraint firstItem="DjA-Cy-UBt" firstAttribute="top" secondItem="iqq-57-Jnx" secondAttribute="top" constant="55" id="nTn-Gs-o3R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iqq-57-Jnx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5b-u9-EGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-491.304347826087" y="-1268.4782608695652"/>
         </scene>
         <!--Card Full View Controller-->
         <scene sceneID="ZLU-6K-O2f">
@@ -263,7 +301,7 @@
         <!--YourCards-->
         <scene sceneID="ZP2-Gs-ORU">
             <objects>
-                <tableViewController id="hBs-ek-zc4" customClass="CardTableViewController" customModule="YourCards" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="errorStoryboard" id="hBs-ek-zc4" customClass="CardTableViewController" customModule="YourCards" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Klt-5a-SIV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,7 +383,7 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="6273-200" id="pLt-96-NPL">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.96071070430000005" green="0.96082574129999998" blue="0.96067160370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="1CZ-A3-gnG" kind="show" id="9Xd-Xw-qBP"/>
                                 </connections>
@@ -386,7 +424,7 @@
         <scene sceneID="GAv-Cw-JzX">
             <objects>
                 <navigationController id="tgN-50-QFV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cards" image="first" id="2p7-rT-RPQ"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Cards" image="first" id="2p7-rT-RPQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="5699043-designer-wallpaper" id="gdL-ZE-zGZ">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -655,7 +693,7 @@
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbW-tF-MmC">
                                                 <rect key="frame" x="34" y="65" width="307" height="31.666666666666671"/>
-                                                <color key="backgroundColor" red="0.16108125449999999" green="0.17886459830000001" blue="0.20529165860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.16078431372549018" green="0.1803921568627451" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -805,6 +843,7 @@
         <image name="first" width="21" height="21"/>
         <image name="photo" width="333" height="166"/>
         <image name="photoalbum" width="42" height="42"/>
+        <image name="robot-msg-error" width="300" height="286"/>
         <image name="second" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
