@@ -24,8 +24,8 @@ class SettingsTableViewController: UITableViewController {
         touchIdImage.layer.cornerRadius = 28
         animationImage.layer.cornerRadius = 28
         
-            touchIDSwitch.setOn(defaults.bool(forKey: "touchID"), animated: true)
-            animateSwitch.setOn(defaults.bool(forKey: "tableViewAnimate"), animated: true)
+            touchIDSwitch.setOn(defaults.bool(forKey: "touchID"), animated: false)
+            animateSwitch.setOn(defaults.bool(forKey: "tableViewAnimate"), animated: false)
         
     }
     

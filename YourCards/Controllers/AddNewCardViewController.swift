@@ -34,7 +34,10 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         self.cardBackImage?.isUserInteractionEnabled = true
         addCardRoundCorners()
         loadImage()
-        addViewAnimation()
+        
+        if UserDefaults.standard.bool(forKey: "tableViewAnimate") == true {
+            addViewAnimation()
+        }
     
         self.cardNameTextField.delegate = self
         self.cardNumberTextField.delegate = self
@@ -67,7 +70,6 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
                 
             } else {
                 let alertController = UIAlertController(title: "OOPS", message: "You need to give all the informations required to save new card", preferredStyle: .alert)
-                
                 alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
             }
@@ -202,7 +204,7 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
         picker.dismiss(animated: true, completion: nil)
         
     }
-    
+
     func addViewAnimation(){
         
         cardBarCode.center.x = self.view.frame.width + 30
@@ -256,3 +258,4 @@ class AddNewCardViewController: UIViewController, UINavigationControllerDelegate
     }
 
 }
+

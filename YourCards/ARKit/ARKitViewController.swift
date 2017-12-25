@@ -64,27 +64,6 @@ class ARKitViewController: UIViewController {
         }
     }
     
-    // MARK: - Animate background color
-    
-    func animateBackgroundColor(){
-        
-        colorArray.append((color1: #colorLiteral(red: 0.6502587795, green: 0.1714085937, blue: 0.4642885923, alpha: 1), color2: #colorLiteral(red: 0.5290039182, green: 0.235301286, blue: 0.5726263523, alpha: 1)))
-        colorArray.append((color1: #colorLiteral(red: 0.5290039182, green: 0.235301286, blue: 0.5726263523, alpha: 1), color2: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)))
-        colorArray.append((color1: #colorLiteral(red: 0.1604961157, green: 0.3959937096, blue: 0.5647168756, alpha: 1), color2: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)))
-        colorArray.append((color1: #colorLiteral(red: 0.3136580586, green: 0.7570564151, blue: 0.9673162103, alpha: 1), color2: #colorLiteral(red: 0.1960784314, green: 0.5843137255, blue: 0.5294117647, alpha: 1)))
-        colorArray.append((color1: #colorLiteral(red: 0.1960784314, green: 0.5843137255, blue: 0.5294117647, alpha: 1), color2: #colorLiteral(red: 0.1610812545, green: 0.1788645983, blue: 0.2052916586, alpha: 1)))
-        colorArray.append((color1: #colorLiteral(red: 0.1610812545, green: 0.1788645983, blue: 0.2052916586, alpha: 1), color2: #colorLiteral(red: 0.6502587795, green: 0.1714085937, blue: 0.4642885923, alpha: 1)))
-        
-        currentColorArrayIndex = currentColorArrayIndex == (colorArray.count - 1) ? 0 : currentColorArrayIndex + 1
-        
-        UIView.transition(with: gradientView, duration: 2, options: [.transitionCrossDissolve], animations: {
-            self.gradientView.tintColor = self.colorArray[self.currentColorArrayIndex].color1
-            self.gradientView.tintColor = self.colorArray[self.currentColorArrayIndex].color2
-        }) { (success) in
-            self.animateBackgroundColor()
-        }
-    }
-    
     func addObject() {
         let ship = SpaceShip()
         ship.loadModal()
