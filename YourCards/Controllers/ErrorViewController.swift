@@ -25,6 +25,10 @@ class ErrorViewController: UIViewController {
         createAnimatorAndBehaviors()
     }
     
+    @IBAction func exitButton(_ sender: UIButton) {
+        exit(0)
+    }
+
     func createGestureRecognizer() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tap)
